@@ -1,5 +1,11 @@
-﻿namespace SciCalcZilla
+﻿/// <summary>
+/// 
+/// </summary>
+namespace SciCalcZilla
 {
+    /// <summary>
+    /// 
+    /// </summary>
     partial class Form1
     {
         /// <summary>
@@ -54,6 +60,7 @@
 
         #endregion
 
+        // INSTANCE VARIABLES.
         private SciCalcZillaLib.UserControl1 userControl11;
     }
 }

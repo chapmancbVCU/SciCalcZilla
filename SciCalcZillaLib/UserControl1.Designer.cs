@@ -1,5 +1,11 @@
-﻿namespace SciCalcZillaLib
+﻿/// <summary>
+/// 
+/// </summary>
+namespace SciCalcZillaLib
 {
+    /// <summary>
+    /// 
+    /// </summary>
     partial class UserControl1
     {
         /// <summary>
@@ -1226,6 +1232,7 @@
 
         #endregion
 
+        // INSTANCE VARIABLES.
         private System.Windows.Forms.SplitContainer parentSplitContainer;
         private System.Windows.Forms.SplitContainer outputSplitContainer;
         private System.Windows.Forms.TextBox textBox1;

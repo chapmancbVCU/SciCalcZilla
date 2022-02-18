@@ -4,8 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// 
+/// </summary>
 namespace SciCalcZilla
 {
+    /// <summary>
+    /// This class contains main entry point for the application.
+    /// </summary>
     internal static class Program
     {
         /// <summary>

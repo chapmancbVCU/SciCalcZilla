@@ -24,6 +24,11 @@ namespace SciCalcZillaLib
         public UserControl1()
         {
             InitializeComponent();
+
+            listView1.View = View.Details;
+
+            // Set Full Row Select to true so we can populate just one column.
+            listView1.FullRowSelect = true;
         }
 
         /// <summary>
@@ -36,6 +41,10 @@ namespace SciCalcZillaLib
 
         }
 
+        /**********************************************************************
+         * Region for numbers Zero to Nine.                                   *
+         *********************************************************************/
+        #region     
         /// <summary>
         /// Event handler for the number "0" button.
         /// </summary>
@@ -43,7 +52,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void numberZeroButton_Click(object sender, EventArgs e)
         {
-
+            textBox1.Text = textBox1.Text + 0;
         }
 
         /// <summary>
@@ -53,7 +62,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void numberOneButton_Click(object sender, EventArgs e)
         {
-
+            textBox1.Text = textBox1.Text + 1;
         }
 
         /// <summary>
@@ -63,7 +72,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void numberTwoButton_Click(object sender, EventArgs e)
         {
-
+            textBox1.Text = textBox1.Text + 2;
         }
 
         /// <summary>
@@ -73,7 +82,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void numberThreeButton_Click(object sender, EventArgs e)
         {
-
+            textBox1.Text = textBox1.Text + 3;
         }
 
         /// <summary>
@@ -83,7 +92,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void numberFourButton_Click(object sender, EventArgs e)
         {
-
+            textBox1.Text = textBox1.Text + 4;
         }
 
         /// <summary>
@@ -93,7 +102,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void numberFiveButton_Click(object sender, EventArgs e)
         {
-
+            textBox1.Text = textBox1.Text + 5;
         }
 
         /// <summary>
@@ -103,7 +112,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void numberSixButton_Click(object sender, EventArgs e)
         {
-
+            textBox1.Text = textBox1.Text + 6;
         }
 
         /// <summary>
@@ -113,7 +122,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void numberSevenButton_Click(object sender, EventArgs e)
         {
-
+            textBox1.Text = textBox1.Text + 7;
         }
 
         /// <summary>
@@ -123,7 +132,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void numberEightButton_Click(object sender, EventArgs e)
         {
-
+            textBox1.Text = textBox1.Text + 8;
         }
 
         /// <summary>
@@ -133,9 +142,14 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void numberNineButton_Click(object sender, EventArgs e)
         {
-
+            textBox1.Text = textBox1.Text + 9;
         }
+        #endregion
 
+        /**********************************************************************
+         * Region for Hexidecimal numbers A to F.                             *
+         *********************************************************************/
+        #region
         /// <summary>
         /// Event handler for the number "A" button.
         /// </summary>
@@ -143,7 +157,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void hexAButton_Click(object sender, EventArgs e)
         {
-
+            textBox1.Text = textBox1.Text + "A";
         }
 
         /// <summary>
@@ -153,7 +167,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void hexBButton_Click(object sender, EventArgs e)
         {
-
+            textBox1.Text = textBox1.Text + "B";
         }
 
         /// <summary>
@@ -163,7 +177,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void hexCButton_Click(object sender, EventArgs e)
         {
-
+            textBox1.Text = textBox1.Text + "C";
         }
 
         /// <summary>
@@ -173,7 +187,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void hexDButton_Click(object sender, EventArgs e)
         {
-
+            textBox1.Text = textBox1.Text + "D";
         }
 
         /// <summary>
@@ -183,7 +197,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void hexEButton_Click(object sender, EventArgs e)
         {
-
+            textBox1.Text = textBox1.Text + "E";
         }
 
         /// <summary>
@@ -193,9 +207,14 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void hexFButton_Click(object sender, EventArgs e)
         {
-
+            textBox1.Text = textBox1.Text + "F";
         }
+        #endregion
 
+        /**********************************************************************
+         * Region for basic calculator panel operations.                      *
+         *********************************************************************/
+        #region
         /// <summary>
         /// Event handler for the Addition operation "+" button.
         /// </summary>
@@ -295,7 +314,14 @@ namespace SciCalcZillaLib
         {
 
         }
+        #endregion
 
+        
+
+        /**********************************************************************
+         * Region for all other operations.                                   *
+         *********************************************************************/
+        #region
         /// <summary>
         /// Event handler for the MC operation "MC" button.
         /// </summary>
@@ -375,5 +401,11 @@ namespace SciCalcZillaLib
         {
 
         }
+        #endregion
+
+        // INSTANCE VARIABLES.
+        string answer;
+        int operation;
+        string number1;
     }
 }
