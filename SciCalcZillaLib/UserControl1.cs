@@ -222,7 +222,10 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void additionButton_Click(object sender, EventArgs e)
         {
-
+            number1 = float.Parse(textBox1.Text).ToString();
+            textBox1.Clear();
+            textBox1.Focus();
+            operation = 2;
         }
 
         /// <summary>
@@ -232,7 +235,13 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void subtractionButton_Click(object sender, EventArgs e)
         {
-
+            if (textBox1.Text != "")
+            {
+                number1 = float.Parse(textBox1.Text).ToString();
+                textBox1.Clear();
+                textBox1.Focus();
+                operation = 1;
+            }
         }
 
         /// <summary>
@@ -242,7 +251,10 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void multiplicationButton_Click(object sender, EventArgs e)
         {
-
+            number1 = float.Parse(textBox1.Text).ToString();
+            textBox1.Clear();
+            textBox1.Focus();
+            operation = 3;
         }
 
         /// <summary>
@@ -252,7 +264,10 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void divisionButton_Click(object sender, EventArgs e)
         {
-
+            number1 = float.Parse(textBox1.Text).ToString();
+            textBox1.Clear();
+            textBox1.Focus();
+            operation = 4;
         }
 
         /// <summary>
