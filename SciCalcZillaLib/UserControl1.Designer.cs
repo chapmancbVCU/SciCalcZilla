@@ -869,6 +869,7 @@ namespace SciCalcZillaLib
             this.binaryRadioButton.TabIndex = 3;
             this.binaryRadioButton.Text = "Binary";
             this.binaryRadioButton.UseVisualStyleBackColor = true;
+            this.binaryRadioButton.CheckedChanged += new System.EventHandler(this.binaryRadioButton_CheckedChanged);
             // 
             // hexaecimalRadioButton
             // 

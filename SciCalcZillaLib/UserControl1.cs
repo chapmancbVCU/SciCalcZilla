@@ -236,9 +236,7 @@ namespace SciCalcZillaLib
             try
             {
                 number1 = float.Parse(inputTextbox.Text);
-
                 operation = 2;
-                
             }
             catch (FormatException ex)
             {
@@ -331,7 +329,10 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void equalsButton_Click(object sender, EventArgs e)
         {
-            compute(operation);
+            if (isDecimal == true)
+            {
+                computeDecimalOperations(operation);
+            }
         }
 
         /// <summary>
@@ -497,12 +498,32 @@ namespace SciCalcZillaLib
         #endregion
 
         /// <summary>
+        ///Set binary to true, others to false, and enables other decimal 
+        ///buttons and hex buttions if enabled.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void binaryRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            isBinary = true;
+            isDecimal = false;
+            isHexadecimal = false;
+
+            // Disable un-needed buttons to avoid confusion from the user.
+            disableHexButtons();
+            disableNonBinaryDigits();
+
+            // Clear the contents of the text box.
+            inputTextbox.Clear();
+        }
+
+        /// <summary>
         /// This method performs the operatons on the operands entered into 
         /// the calculator.
         /// </summary>
         /// <param name="operation">The type of mathematical operation we 
         /// will perform.</param>
-        public void compute(int operation)
+        public void computeDecimalOperations(int operation)
         {
             string newRow = "";
             float number2 = 0;
@@ -566,6 +587,11 @@ namespace SciCalcZillaLib
             isDecimal = true;
             isHexadecimal = false;
 
+            // Disable these buttons to avoid confusion.
+            disableHexButtons();
+
+            // Ensure required buttons are enabled.
+            enableNonBinaryDigits();
             // Clear the contents of the text box.
             inputTextbox.Clear();
         }
@@ -584,6 +610,21 @@ namespace SciCalcZillaLib
         }
 
         /// <summary>
+        /// Disable buttons for non-binary base 10 digits.
+        /// </summary>
+        private void disableNonBinaryDigits()
+        {
+            numberTwoButton.Enabled = false;
+            numberThreeButton.Enabled = false;
+            numberFourButton.Enabled = false;
+            numberFiveButton.Enabled = false;
+            numberSixButton.Enabled = false;
+            numberSevenButton.Enabled = false;
+            numberEightButton.Enabled = false;
+            numberNineButton.Enabled = false;
+        }
+
+        /// <summary>
         /// Disable the A-F hexadecimal buttons.
         /// </summary>
         private void enableHexButtons()
@@ -596,6 +637,22 @@ namespace SciCalcZillaLib
             hexFButton.Enabled ^= true;
         }
 
+
+        /// <summary>
+        /// Enable buttons for non-binary base 10 digits.
+        /// </summary>
+        private void enableNonBinaryDigits()
+        {
+            numberTwoButton.Enabled ^= true;
+            numberThreeButton.Enabled ^= true;
+            numberFourButton.Enabled ^= true;
+            numberFiveButton.Enabled ^= true;
+            numberSixButton.Enabled ^= true;
+            numberSevenButton.Enabled ^= true;
+            numberEightButton.Enabled ^= true;
+            numberNineButton.Enabled ^= true;
+        }
+
         /// <summary>
         /// Set hexadecimal to true, others to false, and enables hexadecimal 
         /// buttons.
@@ -605,7 +662,14 @@ namespace SciCalcZillaLib
         private void hexaecimalRadioButton_CheckedChanged(object sender, 
             EventArgs e)
         {
+            // Enable the required buttons for this mode.
             enableHexButtons();
+
+            /*
+             * Ensure these buttons are also enabled if previous mode is
+             * binary.
+             */
+            enableNonBinaryDigits();
             isBinary = false;
             isDecimal = false;
             isHexadecimal = true;
@@ -659,5 +723,7 @@ namespace SciCalcZillaLib
         bool isHexadecimal;
         int operation;
         float number1;
+
+        
     }
 }

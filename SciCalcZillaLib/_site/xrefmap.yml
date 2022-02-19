@@ -26,19 +26,19 @@ references:
   isSpec: "True"
   fullName: SciCalcZillaLib.UserControl1.UserControl1
   nameWithType: UserControl1.UserControl1
-- uid: SciCalcZillaLib.UserControl1.compute(System.Int32)
-  name: compute(Int32)
-  href: api/SciCalcZillaLib.UserControl1.html#SciCalcZillaLib_UserControl1_compute_System_Int32_
-  commentId: M:SciCalcZillaLib.UserControl1.compute(System.Int32)
-  fullName: SciCalcZillaLib.UserControl1.compute(System.Int32)
-  nameWithType: UserControl1.compute(Int32)
-- uid: SciCalcZillaLib.UserControl1.compute*
-  name: compute
-  href: api/SciCalcZillaLib.UserControl1.html#SciCalcZillaLib_UserControl1_compute_
-  commentId: Overload:SciCalcZillaLib.UserControl1.compute
+- uid: SciCalcZillaLib.UserControl1.computeDecimalOperations(System.Int32)
+  name: computeDecimalOperations(Int32)
+  href: api/SciCalcZillaLib.UserControl1.html#SciCalcZillaLib_UserControl1_computeDecimalOperations_System_Int32_
+  commentId: M:SciCalcZillaLib.UserControl1.computeDecimalOperations(System.Int32)
+  fullName: SciCalcZillaLib.UserControl1.computeDecimalOperations(System.Int32)
+  nameWithType: UserControl1.computeDecimalOperations(Int32)
+- uid: SciCalcZillaLib.UserControl1.computeDecimalOperations*
+  name: computeDecimalOperations
+  href: api/SciCalcZillaLib.UserControl1.html#SciCalcZillaLib_UserControl1_computeDecimalOperations_
+  commentId: Overload:SciCalcZillaLib.UserControl1.computeDecimalOperations
   isSpec: "True"
-  fullName: SciCalcZillaLib.UserControl1.compute
-  nameWithType: UserControl1.compute
+  fullName: SciCalcZillaLib.UserControl1.computeDecimalOperations
+  nameWithType: UserControl1.computeDecimalOperations
 - uid: SciCalcZillaLib.UserControl1.Dispose(System.Boolean)
   name: Dispose(Boolean)
   href: api/SciCalcZillaLib.UserControl1.html#SciCalcZillaLib_UserControl1_Dispose_System_Boolean_
