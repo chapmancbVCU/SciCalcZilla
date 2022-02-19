@@ -24,7 +24,6 @@ namespace SciCalcZillaLib
         public UserControl1()
         {
             InitializeComponent();
-            firstInputDetected = false;
 
             // Set the initial values for base modes.
             isBinary = false;
@@ -63,8 +62,6 @@ namespace SciCalcZillaLib
         private void numberZeroButton_Click(object sender, EventArgs e)
         {
             inputTextbox.Text = inputTextbox.Text + 0;
-            firstInputDetected = true;
-
         }
 
         /// <summary>
@@ -246,7 +243,7 @@ namespace SciCalcZillaLib
             catch (FormatException ex)
             {
                 string newRow = ""; newRow = "Invalid Input - Enter operand before " +
-                    "operation/function";
+                    "operation/function Addition '+'";
                 // Update the list with a new row containing Invalid Input message.
                 UpdateListView(newRow);
                 operation = 0;
@@ -270,7 +267,7 @@ namespace SciCalcZillaLib
             catch (FormatException ex)
             {
                 string newRow = ""; newRow = "Invalid Input - Enter operand before " +
-                    "operation/function";
+                    "operation/function Subraction '-'";
                 // Update the list with a new row containing Invalid Input message.
                 UpdateListView(newRow);
                 operation = 0;
@@ -294,7 +291,7 @@ namespace SciCalcZillaLib
             catch (FormatException ex)
             {
                 string newRow = ""; newRow = "Invalid Input - Enter operand before " +
-                    "operation/function";
+                    "operation/function Multipliication '*'";
                 // Update the list with a new row containing Invalid Input message.
                 UpdateListView(newRow);
                 operation = 0;
@@ -318,7 +315,7 @@ namespace SciCalcZillaLib
             catch (FormatException ex)
             {
                 string newRow = ""; newRow = "Invalid Input - Enter operand before " +
-                    "operation/function";
+                    "operation/function Division '/'";
                 // Update the list with a new row containing Invalid Input message.
                 UpdateListView(newRow);
                 operation = 0;
@@ -548,7 +545,7 @@ namespace SciCalcZillaLib
             catch (FormatException err)
             {
                 newRow  = "Invalid Input - Enter operand before " +
-                    "operation/function";
+                    "operation/function '='";
                 inputTextbox.Clear();
                 operation = 0;
             }
@@ -568,6 +565,9 @@ namespace SciCalcZillaLib
             isBinary = false;
             isDecimal = true;
             isHexadecimal = false;
+
+            // Clear the contents of the text box.
+            inputTextbox.Clear();
         }
         
         /// <summary>
@@ -608,7 +608,10 @@ namespace SciCalcZillaLib
             enableHexButtons();
             isBinary = false;
             isDecimal = false;
-            isHexadecimal = true;   
+            isHexadecimal = true;
+
+            // Clear the contents of the text box.
+            inputTextbox.Clear();
         }
 
         /// <summary>
@@ -653,9 +656,8 @@ namespace SciCalcZillaLib
         float answer;
         bool isBinary;
         bool isDecimal;
-        bool firstInputDetected;
         bool isHexadecimal;
         int operation;
-        float number1;        
+        float number1;
     }
 }

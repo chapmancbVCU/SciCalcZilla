@@ -80,6 +80,25 @@ namespace SciCalcZillaLib
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.cotOpButton = new System.Windows.Forms.Button();
+            this.sinOpButton = new System.Windows.Forms.Button();
+            this.cosOpButton = new System.Windows.Forms.Button();
+            this.tanOpButton = new System.Windows.Forms.Button();
+            this.cscOpButton = new System.Windows.Forms.Button();
+            this.secOpButton = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.scientificModeRadioButton = new System.Windows.Forms.RadioButton();
+            this.standardModeRadioButton = new System.Windows.Forms.RadioButton();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.binaryRadioButton = new System.Windows.Forms.RadioButton();
+            this.hexaecimalRadioButton = new System.Windows.Forms.RadioButton();
+            this.decimalRadioButton = new System.Windows.Forms.RadioButton();
+            this.label13 = new System.Windows.Forms.Label();
             this.hexNumbersPanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.hexFButton = new System.Windows.Forms.Button();
@@ -118,21 +137,6 @@ namespace SciCalcZillaLib
             this.msButton = new System.Windows.Forms.Button();
             this.mrButton = new System.Windows.Forms.Button();
             this.mcButton = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.decimalRadioButton = new System.Windows.Forms.RadioButton();
-            this.hexaecimalRadioButton = new System.Windows.Forms.RadioButton();
-            this.binaryRadioButton = new System.Windows.Forms.RadioButton();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.parentSplitContainer)).BeginInit();
             this.parentSplitContainer.Panel1.SuspendLayout();
             this.parentSplitContainer.Panel2.SuspendLayout();
@@ -153,15 +157,16 @@ namespace SciCalcZillaLib
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.hexNumbersPanel.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.keypadPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // parentSplitContainer
@@ -206,11 +211,11 @@ namespace SciCalcZillaLib
             // 
             // inputTextbox
             // 
-            this.inputTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.inputTextbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.inputTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputTextbox.Location = new System.Drawing.Point(4, 1);
+            this.inputTextbox.Location = new System.Drawing.Point(0, 0);
             this.inputTextbox.Name = "inputTextbox";
-            this.inputTextbox.Size = new System.Drawing.Size(1318, 50);
+            this.inputTextbox.Size = new System.Drawing.Size(1328, 50);
             this.inputTextbox.TabIndex = 0;
             this.inputTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.inputTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inputTextbox_KeyPress);
@@ -670,6 +675,233 @@ namespace SciCalcZillaLib
             this.label4.Size = new System.Drawing.Size(36, 26);
             this.label4.TabIndex = 2;
             this.label4.Text = "31";
+            // 
+            // panel11
+            // 
+            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel11.Controls.Add(this.tableLayoutPanel4);
+            this.panel11.Location = new System.Drawing.Point(460, 12);
+            this.panel11.Margin = new System.Windows.Forms.Padding(5);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(82, 393);
+            this.panel11.TabIndex = 3;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.Controls.Add(this.cotOpButton, 0, 5);
+            this.tableLayoutPanel4.Controls.Add(this.sinOpButton, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.cosOpButton, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.tanOpButton, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.cscOpButton, 0, 3);
+            this.tableLayoutPanel4.Controls.Add(this.secOpButton, 0, 4);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 6;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(78, 389);
+            this.tableLayoutPanel4.TabIndex = 0;
+            // 
+            // cotOpButton
+            // 
+            this.cotOpButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cotOpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cotOpButton.Location = new System.Drawing.Point(5, 325);
+            this.cotOpButton.Margin = new System.Windows.Forms.Padding(5);
+            this.cotOpButton.Name = "cotOpButton";
+            this.cotOpButton.Size = new System.Drawing.Size(68, 59);
+            this.cotOpButton.TabIndex = 7;
+            this.cotOpButton.Text = "cot";
+            this.cotOpButton.UseVisualStyleBackColor = true;
+            // 
+            // sinOpButton
+            // 
+            this.sinOpButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sinOpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sinOpButton.Location = new System.Drawing.Point(5, 5);
+            this.sinOpButton.Margin = new System.Windows.Forms.Padding(5);
+            this.sinOpButton.Name = "sinOpButton";
+            this.sinOpButton.Size = new System.Drawing.Size(68, 54);
+            this.sinOpButton.TabIndex = 2;
+            this.sinOpButton.Text = "sin";
+            this.sinOpButton.UseVisualStyleBackColor = true;
+            // 
+            // cosOpButton
+            // 
+            this.cosOpButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cosOpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cosOpButton.Location = new System.Drawing.Point(5, 69);
+            this.cosOpButton.Margin = new System.Windows.Forms.Padding(5);
+            this.cosOpButton.Name = "cosOpButton";
+            this.cosOpButton.Size = new System.Drawing.Size(68, 54);
+            this.cosOpButton.TabIndex = 3;
+            this.cosOpButton.Text = "cos";
+            this.cosOpButton.UseVisualStyleBackColor = true;
+            // 
+            // tanOpButton
+            // 
+            this.tanOpButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tanOpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tanOpButton.Location = new System.Drawing.Point(5, 133);
+            this.tanOpButton.Margin = new System.Windows.Forms.Padding(5);
+            this.tanOpButton.Name = "tanOpButton";
+            this.tanOpButton.Size = new System.Drawing.Size(68, 54);
+            this.tanOpButton.TabIndex = 4;
+            this.tanOpButton.Text = "tan";
+            this.tanOpButton.UseVisualStyleBackColor = true;
+            // 
+            // cscOpButton
+            // 
+            this.cscOpButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cscOpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cscOpButton.Location = new System.Drawing.Point(5, 197);
+            this.cscOpButton.Margin = new System.Windows.Forms.Padding(5);
+            this.cscOpButton.Name = "cscOpButton";
+            this.cscOpButton.Size = new System.Drawing.Size(68, 54);
+            this.cscOpButton.TabIndex = 5;
+            this.cscOpButton.Text = "csc";
+            this.cscOpButton.UseVisualStyleBackColor = true;
+            // 
+            // secOpButton
+            // 
+            this.secOpButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.secOpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.secOpButton.Location = new System.Drawing.Point(5, 261);
+            this.secOpButton.Margin = new System.Windows.Forms.Padding(5);
+            this.secOpButton.Name = "secOpButton";
+            this.secOpButton.Size = new System.Drawing.Size(68, 54);
+            this.secOpButton.TabIndex = 6;
+            this.secOpButton.Text = "sec";
+            this.secOpButton.UseVisualStyleBackColor = true;
+            // 
+            // panel9
+            // 
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel9.Controls.Add(this.tableLayoutPanel3);
+            this.panel9.Location = new System.Drawing.Point(548, 17);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(207, 383);
+            this.panel9.TabIndex = 2;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.panel12, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.panel10, 0, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(-1, 1);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 3;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.17647F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.63324F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.2058F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(203, 379);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // panel12
+            // 
+            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel12.Controls.Add(this.scientificModeRadioButton);
+            this.panel12.Controls.Add(this.standardModeRadioButton);
+            this.panel12.Controls.Add(this.label15);
+            this.panel12.Location = new System.Drawing.Point(3, 159);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(197, 147);
+            this.panel12.TabIndex = 4;
+            // 
+            // scientificModeRadioButton
+            // 
+            this.scientificModeRadioButton.AutoSize = true;
+            this.scientificModeRadioButton.Location = new System.Drawing.Point(22, 76);
+            this.scientificModeRadioButton.Name = "scientificModeRadioButton";
+            this.scientificModeRadioButton.Size = new System.Drawing.Size(130, 29);
+            this.scientificModeRadioButton.TabIndex = 2;
+            this.scientificModeRadioButton.Text = "Scientific";
+            this.scientificModeRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // standardModeRadioButton
+            // 
+            this.standardModeRadioButton.AutoSize = true;
+            this.standardModeRadioButton.Checked = true;
+            this.standardModeRadioButton.Location = new System.Drawing.Point(22, 41);
+            this.standardModeRadioButton.Name = "standardModeRadioButton";
+            this.standardModeRadioButton.Size = new System.Drawing.Size(130, 29);
+            this.standardModeRadioButton.TabIndex = 1;
+            this.standardModeRadioButton.TabStop = true;
+            this.standardModeRadioButton.Text = "Standard";
+            this.standardModeRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(63, 6);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(66, 25);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Mode";
+            // 
+            // panel10
+            // 
+            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel10.Controls.Add(this.binaryRadioButton);
+            this.panel10.Controls.Add(this.hexaecimalRadioButton);
+            this.panel10.Controls.Add(this.decimalRadioButton);
+            this.panel10.Controls.Add(this.label13);
+            this.panel10.Location = new System.Drawing.Point(3, 3);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(197, 150);
+            this.panel10.TabIndex = 0;
+            // 
+            // binaryRadioButton
+            // 
+            this.binaryRadioButton.AutoSize = true;
+            this.binaryRadioButton.Location = new System.Drawing.Point(22, 111);
+            this.binaryRadioButton.Name = "binaryRadioButton";
+            this.binaryRadioButton.Size = new System.Drawing.Size(104, 29);
+            this.binaryRadioButton.TabIndex = 3;
+            this.binaryRadioButton.Text = "Binary";
+            this.binaryRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // hexaecimalRadioButton
+            // 
+            this.hexaecimalRadioButton.AutoSize = true;
+            this.hexaecimalRadioButton.Location = new System.Drawing.Point(22, 76);
+            this.hexaecimalRadioButton.Name = "hexaecimalRadioButton";
+            this.hexaecimalRadioButton.Size = new System.Drawing.Size(167, 29);
+            this.hexaecimalRadioButton.TabIndex = 2;
+            this.hexaecimalRadioButton.Text = "Hexadecimal";
+            this.hexaecimalRadioButton.UseVisualStyleBackColor = true;
+            this.hexaecimalRadioButton.CheckedChanged += new System.EventHandler(this.hexaecimalRadioButton_CheckedChanged);
+            // 
+            // decimalRadioButton
+            // 
+            this.decimalRadioButton.AutoSize = true;
+            this.decimalRadioButton.Checked = true;
+            this.decimalRadioButton.Location = new System.Drawing.Point(22, 41);
+            this.decimalRadioButton.Name = "decimalRadioButton";
+            this.decimalRadioButton.Size = new System.Drawing.Size(120, 29);
+            this.decimalRadioButton.TabIndex = 1;
+            this.decimalRadioButton.TabStop = true;
+            this.decimalRadioButton.Text = "Decimal";
+            this.decimalRadioButton.UseVisualStyleBackColor = true;
+            this.decimalRadioButton.CheckedChanged += new System.EventHandler(this.decimalRadioButton_CheckedChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(63, 6);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(61, 25);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Base";
             // 
             // hexNumbersPanel
             // 
@@ -1208,191 +1440,6 @@ namespace SciCalcZillaLib
             this.mcButton.UseVisualStyleBackColor = true;
             this.mcButton.Click += new System.EventHandler(this.mcButton_Click);
             // 
-            // panel9
-            // 
-            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel9.Controls.Add(this.tableLayoutPanel3);
-            this.panel9.Location = new System.Drawing.Point(548, 17);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(207, 383);
-            this.panel9.TabIndex = 2;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.panel10, 0, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 3;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.17647F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.41176F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.41176F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(203, 379);
-            this.tableLayoutPanel3.TabIndex = 0;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(63, 6);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(61, 25);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Base";
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.binaryRadioButton);
-            this.panel10.Controls.Add(this.hexaecimalRadioButton);
-            this.panel10.Controls.Add(this.decimalRadioButton);
-            this.panel10.Controls.Add(this.label13);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(3, 3);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(197, 150);
-            this.panel10.TabIndex = 0;
-            // 
-            // decimalRadioButton
-            // 
-            this.decimalRadioButton.AutoSize = true;
-            this.decimalRadioButton.Checked = true;
-            this.decimalRadioButton.Location = new System.Drawing.Point(22, 41);
-            this.decimalRadioButton.Name = "decimalRadioButton";
-            this.decimalRadioButton.Size = new System.Drawing.Size(120, 29);
-            this.decimalRadioButton.TabIndex = 1;
-            this.decimalRadioButton.TabStop = true;
-            this.decimalRadioButton.Text = "Decimal";
-            this.decimalRadioButton.UseVisualStyleBackColor = true;
-            this.decimalRadioButton.CheckedChanged += new System.EventHandler(this.decimalRadioButton_CheckedChanged);
-            // 
-            // hexaecimalRadioButton
-            // 
-            this.hexaecimalRadioButton.AutoSize = true;
-            this.hexaecimalRadioButton.Location = new System.Drawing.Point(22, 76);
-            this.hexaecimalRadioButton.Name = "hexaecimalRadioButton";
-            this.hexaecimalRadioButton.Size = new System.Drawing.Size(167, 29);
-            this.hexaecimalRadioButton.TabIndex = 2;
-            this.hexaecimalRadioButton.Text = "Hexadecimal";
-            this.hexaecimalRadioButton.UseVisualStyleBackColor = true;
-            this.hexaecimalRadioButton.CheckedChanged += new System.EventHandler(this.hexaecimalRadioButton_CheckedChanged);
-            // 
-            // binaryRadioButton
-            // 
-            this.binaryRadioButton.AutoSize = true;
-            this.binaryRadioButton.Location = new System.Drawing.Point(22, 111);
-            this.binaryRadioButton.Name = "binaryRadioButton";
-            this.binaryRadioButton.Size = new System.Drawing.Size(104, 29);
-            this.binaryRadioButton.TabIndex = 3;
-            this.binaryRadioButton.Text = "Binary";
-            this.binaryRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // panel11
-            // 
-            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel11.Controls.Add(this.tableLayoutPanel4);
-            this.panel11.Location = new System.Drawing.Point(460, 12);
-            this.panel11.Margin = new System.Windows.Forms.Padding(5);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(82, 393);
-            this.panel11.TabIndex = 3;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 1;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Controls.Add(this.button6, 0, 5);
-            this.tableLayoutPanel4.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.button2, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.button3, 0, 2);
-            this.tableLayoutPanel4.Controls.Add(this.button4, 0, 3);
-            this.tableLayoutPanel4.Controls.Add(this.button5, 0, 4);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 6;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(78, 389);
-            this.tableLayoutPanel4.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(5, 5);
-            this.button1.Margin = new System.Windows.Forms.Padding(5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(68, 54);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "sin";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(5, 69);
-            this.button2.Margin = new System.Windows.Forms.Padding(5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(68, 54);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "cos";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(5, 133);
-            this.button3.Margin = new System.Windows.Forms.Padding(5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(68, 54);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "tan";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(5, 197);
-            this.button4.Margin = new System.Windows.Forms.Padding(5);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(68, 54);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "csc";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(5, 261);
-            this.button5.Margin = new System.Windows.Forms.Padding(5);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(68, 54);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "sec";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(5, 325);
-            this.button6.Margin = new System.Windows.Forms.Padding(5);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(68, 59);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "cot";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
             // UserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -1431,16 +1478,18 @@ namespace SciCalcZillaLib
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.hexNumbersPanel.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.keypadPanel.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1541,11 +1590,15 @@ namespace SciCalcZillaLib
         private System.Windows.Forms.RadioButton decimalRadioButton;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button cotOpButton;
+        private System.Windows.Forms.Button sinOpButton;
+        private System.Windows.Forms.Button cosOpButton;
+        private System.Windows.Forms.Button tanOpButton;
+        private System.Windows.Forms.Button cscOpButton;
+        private System.Windows.Forms.Button secOpButton;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.RadioButton scientificModeRadioButton;
+        private System.Windows.Forms.RadioButton standardModeRadioButton;
+        private System.Windows.Forms.Label label15;
     }
 }

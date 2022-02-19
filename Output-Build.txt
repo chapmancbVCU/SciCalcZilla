@@ -1,0 +1,18 @@
+﻿Build started...
+1>------ Build started: Project: SciCalcZilla, Configuration: Debug Any CPU ------
+1>  SciCalcZilla -> C:\Users\Chad Chapman\source\repos\SciCalcZilla\SciCalcZilla\bin\Debug\SciCalcZilla.exe
+1>  [22-02-19 09:17:43.293]Warning:[MetadataCommand.ExtractMetadata](C:/Users/Chad Chapman/source/repos/SciCalcZilla/SciCalcZilla/SciCalcZilla.csproj)Workspace failed with: [Warning] Found project reference without a matching metadata reference: C:\Users\Chad Chapman\source\repos\SciCalcZilla\SciCalcZillaLib\SciCalcZillaLib.csproj
+1>  
+1>  
+1>  Build succeeded with warning.
+1>  [22-02-19 09:17:47.920]Warning:[MetadataCommand.ExtractMetadata](C:/Users/Chad Chapman/source/repos/SciCalcZilla/SciCalcZilla/SciCalcZilla.csproj)Workspace failed with: [Warning] Found project reference without a matching metadata reference: C:\Users\Chad Chapman\source\repos\SciCalcZilla\SciCalcZillaLib\SciCalcZillaLib.csproj
+1>  	1 Warning(s)
+1>  	0 Error(s)
+Building SciCalcZilla...
+2>------ Publish started: Project: SciCalcZilla, Configuration: Debug Any CPU ------
+Connecting to 'C:\Users\Chad Chapman\Desktop\'...
+Publishing files...
+Publish success.
+C:\Users\Chad Chapman\Desktop\
+========== Build: 1 succeeded, 0 failed, 1 up-to-date, 0 skipped ==========
+========== Publish: 1 succeeded, 0 failed, 0 skipped ==========
