@@ -24,11 +24,20 @@ namespace SciCalcZillaLib
         public UserControl1()
         {
             InitializeComponent();
+            firstInputDetected = false;
+
+            // Set the initial values for base modes.
+            isBinary = false;
+            isDecimal = true;
+            isHexadecimal = false;
+
+            // Set other bases to false.
+            disableHexButtons();
 
             listView1.View = View.Details;
 
             // Set Full Row Select to true so we can populate just one column.
-            listView1.FullRowSelect = true;
+            listView1.FullRowSelect = false;
         }
 
         /// <summary>
@@ -41,6 +50,7 @@ namespace SciCalcZillaLib
 
         }
 
+
         /**********************************************************************
          * Region for numbers Zero to Nine.                                   *
          *********************************************************************/
@@ -52,7 +62,9 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void numberZeroButton_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + 0;
+            inputTextbox.Text = inputTextbox.Text + 0;
+            firstInputDetected = true;
+
         }
 
         /// <summary>
@@ -62,7 +74,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void numberOneButton_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + 1;
+            inputTextbox.Text = inputTextbox.Text + 1;
         }
 
         /// <summary>
@@ -72,7 +84,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void numberTwoButton_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + 2;
+            inputTextbox.Text = inputTextbox.Text + 2;
         }
 
         /// <summary>
@@ -82,7 +94,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void numberThreeButton_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + 3;
+            inputTextbox.Text = inputTextbox.Text + 3;
         }
 
         /// <summary>
@@ -92,7 +104,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void numberFourButton_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + 4;
+            inputTextbox.Text = inputTextbox.Text + 4;
         }
 
         /// <summary>
@@ -102,7 +114,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void numberFiveButton_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + 5;
+            inputTextbox.Text = inputTextbox.Text + 5;
         }
 
         /// <summary>
@@ -112,7 +124,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void numberSixButton_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + 6;
+            inputTextbox.Text = inputTextbox.Text + 6;
         }
 
         /// <summary>
@@ -122,7 +134,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void numberSevenButton_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + 7;
+            inputTextbox.Text = inputTextbox.Text + 7;
         }
 
         /// <summary>
@@ -132,7 +144,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void numberEightButton_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + 8;
+            inputTextbox.Text = inputTextbox.Text + 8;
         }
 
         /// <summary>
@@ -142,9 +154,10 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void numberNineButton_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + 9;
+            inputTextbox.Text = inputTextbox.Text + 9;
         }
         #endregion
+
 
         /**********************************************************************
          * Region for Hexidecimal numbers A to F.                             *
@@ -157,7 +170,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void hexAButton_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + "A";
+            inputTextbox.Text = inputTextbox.Text + "A";
         }
 
         /// <summary>
@@ -167,7 +180,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void hexBButton_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + "B";
+            inputTextbox.Text = inputTextbox.Text + "B";
         }
 
         /// <summary>
@@ -177,7 +190,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void hexCButton_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + "C";
+            inputTextbox.Text = inputTextbox.Text + "C";
         }
 
         /// <summary>
@@ -187,7 +200,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void hexDButton_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + "D";
+            inputTextbox.Text = inputTextbox.Text + "D";
         }
 
         /// <summary>
@@ -197,7 +210,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void hexEButton_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + "E";
+            inputTextbox.Text = inputTextbox.Text + "E";
         }
 
         /// <summary>
@@ -207,9 +220,10 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void hexFButton_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + "F";
+            inputTextbox.Text = inputTextbox.Text + "F";
         }
         #endregion
+
 
         /**********************************************************************
          * Region for basic calculator panel operations.                      *
@@ -222,10 +236,23 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void additionButton_Click(object sender, EventArgs e)
         {
-            number1 = float.Parse(textBox1.Text).ToString();
-            textBox1.Clear();
-            textBox1.Focus();
-            operation = 2;
+            try
+            {
+                number1 = float.Parse(inputTextbox.Text);
+
+                operation = 2;
+                
+            }
+            catch (FormatException ex)
+            {
+                string newRow = ""; newRow = "Invalid Input - Enter operand before " +
+                    "operation/function";
+                // Update the list with a new row containing Invalid Input message.
+                UpdateListView(newRow);
+                operation = 0;
+            }
+            inputTextbox.Focus();
+            inputTextbox.Clear();
         }
 
         /// <summary>
@@ -235,13 +262,21 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void subtractionButton_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "")
-            {
-                number1 = float.Parse(textBox1.Text).ToString();
-                textBox1.Clear();
-                textBox1.Focus();
+            try
+            { 
+                number1 = float.Parse(inputTextbox.Text);
                 operation = 1;
             }
+            catch (FormatException ex)
+            {
+                string newRow = ""; newRow = "Invalid Input - Enter operand before " +
+                    "operation/function";
+                // Update the list with a new row containing Invalid Input message.
+                UpdateListView(newRow);
+                operation = 0;
+            }
+            inputTextbox.Focus();
+            inputTextbox.Clear();
         }
 
         /// <summary>
@@ -251,10 +286,21 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void multiplicationButton_Click(object sender, EventArgs e)
         {
-            number1 = float.Parse(textBox1.Text).ToString();
-            textBox1.Clear();
-            textBox1.Focus();
-            operation = 3;
+            try
+            {
+                number1 = float.Parse(inputTextbox.Text);
+                operation = 3;
+            }
+            catch (FormatException ex)
+            {
+                string newRow = ""; newRow = "Invalid Input - Enter operand before " +
+                    "operation/function";
+                // Update the list with a new row containing Invalid Input message.
+                UpdateListView(newRow);
+                operation = 0;
+            }
+            inputTextbox.Focus();
+            inputTextbox.Clear();
         }
 
         /// <summary>
@@ -264,10 +310,21 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void divisionButton_Click(object sender, EventArgs e)
         {
-            number1 = float.Parse(textBox1.Text).ToString();
-            textBox1.Clear();
-            textBox1.Focus();
-            operation = 4;
+            try
+            {
+                number1 = float.Parse(inputTextbox.Text);
+                operation = 4;
+            }
+            catch (FormatException ex)
+            {
+                string newRow = ""; newRow = "Invalid Input - Enter operand before " +
+                    "operation/function";
+                // Update the list with a new row containing Invalid Input message.
+                UpdateListView(newRow);
+                operation = 0;
+            }
+            inputTextbox.Focus();
+            inputTextbox.Clear();
         }
 
         /// <summary>
@@ -277,17 +334,25 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void equalsButton_Click(object sender, EventArgs e)
         {
-
+            compute(operation);
         }
 
         /// <summary>
-        /// Event handler for the Decimal "." button.
+        /// Event handler for the Decimal "." button.  This method will add 
+        /// a decimal point to the number that is being input by the user.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">EventArgs object.</param>
         private void decimalButton_Click(object sender, EventArgs e)
         {
-
+            /* Verify if the number contains a '.'.  If it doesn't contain 
+             * a decimal then append it to the end of the string.  If a
+             * '.' aleady exists the input is ignored.
+             */
+            if (!inputTextbox.Text.Contains('.'))
+            {
+                inputTextbox.Text = inputTextbox.Text + ".";
+            }
         }
 
         /// <summary>
@@ -297,7 +362,9 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void changSignButton_Click(object sender, EventArgs e)
         {
-
+            // We the multiply the value by -1.
+            answer = -1 * float.Parse(inputTextbox.Text);
+            inputTextbox.Text = answer.ToString();
         }
 
         /// <summary>
@@ -331,7 +398,6 @@ namespace SciCalcZillaLib
         }
         #endregion
 
-        
 
         /**********************************************************************
          * Region for all other operations.                                   *
@@ -394,7 +460,20 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void backspaceButton_Click(object sender, EventArgs e)
         {
+            // Get length.
+            int length = inputTextbox.TextLength - 1;
 
+            // Store input textbox contents in text.
+            string text = inputTextbox.Text;
+
+            // Clear the input textbox's input.
+            inputTextbox.Clear();
+
+            // Set input textbox's value to itself minus the latest number.
+            for(int i = 0; i < length; i++)
+            {
+                inputTextbox.Text = inputTextbox.Text + text[i];
+            }
         }
 
         /// <summary>
@@ -408,19 +487,175 @@ namespace SciCalcZillaLib
         }
 
         /// <summary>
-        /// Event handler for the Clear operation "C" button.
+        /// Event handler for the Clear operation "C" button.  This method 
+        /// will clear the inputTextbox of its contents.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">EventArgs object.</param>
         private void cButton_Click(object sender, EventArgs e)
         {
-
+            inputTextbox.Clear();
+            operation = 0;
         }
         #endregion
 
-        // INSTANCE VARIABLES.
-        string answer;
+        /// <summary>
+        /// This method performs the operatons on the operands entered into 
+        /// the calculator.
+        /// </summary>
+        /// <param name="operation">The type of mathematical operation we 
+        /// will perform.</param>
+        public void compute(int operation)
+        {
+            string newRow = "";
+            float number2 = 0;
+            string sign = "";
+
+            // Try to get numerical input from inputTextbox.Text.
+            try
+            {
+                number2 = float.Parse(inputTextbox.Text);
+                switch (operation)
+                {
+                    case 1:
+                        answer = number1 - float.Parse(inputTextbox.Text);
+                        inputTextbox.Text = answer.ToString();
+                        sign = "-";
+                        break;
+                    case 2:
+                        answer = number1 + float.Parse(inputTextbox.Text);
+                        inputTextbox.Text = answer.ToString();
+                        sign = "+";
+                        break;
+                    case 3:
+                        answer = number1 * float.Parse(inputTextbox.Text);
+                        inputTextbox.Text = answer.ToString();
+                        sign = "*";
+                        break;
+                    case 4:
+                        answer = number1 / float.Parse(inputTextbox.Text);
+                        inputTextbox.Text = answer.ToString();
+                        sign = "/";
+                        break;
+                    default:
+                        break;
+                }
+                // Create formatted answer for history output
+                newRow = number1 + " " + sign + " " + number2 + " = " +
+                     answer.ToString();
+            }
+            // Catch bad input such as having an equals button with no input.
+            catch (FormatException err)
+            {
+                newRow  = "Invalid Input - Enter operand before " +
+                    "operation/function";
+                inputTextbox.Clear();
+                operation = 0;
+            }
+
+            // Update the list with a new row.
+            UpdateListView(newRow);
+        }
+
+        /// <summary>
+        /// Set decimal to true, others to false, and enables decimal buttons.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void decimalRadioButton_CheckedChanged(object sender, 
+            EventArgs e)
+        {
+            isBinary = false;
+            isDecimal = true;
+            isHexadecimal = false;
+        }
+        
+        /// <summary>
+        /// Enable the A-F hexadecimal buttons.
+        /// </summary>
+        private void disableHexButtons()
+        {
+            hexAButton.Enabled = false;
+            hexBButton.Enabled = false;
+            hexCButton.Enabled = false;
+            hexDButton.Enabled = false;
+            hexEButton.Enabled = false;
+            hexFButton.Enabled = false;
+        }
+
+        /// <summary>
+        /// Disable the A-F hexadecimal buttons.
+        /// </summary>
+        private void enableHexButtons()
+        {
+            hexAButton.Enabled ^= true;
+            hexBButton.Enabled ^= true;
+            hexCButton.Enabled ^= true;
+            hexDButton.Enabled ^= true;
+            hexEButton.Enabled ^= true;
+            hexFButton.Enabled ^= true;
+        }
+
+        /// <summary>
+        /// Set hexadecimal to true, others to false, and enables hexadecimal 
+        /// buttons.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArg object.</param>
+        private void hexaecimalRadioButton_CheckedChanged(object sender, 
+            EventArgs e)
+        {
+            enableHexButtons();
+            isBinary = false;
+            isDecimal = false;
+            isHexadecimal = true;   
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void inputTextbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            if((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled= true;
+            }
+        }
+
+        /// <summary>
+        /// Updates instance variable listView1 with new row that represents 
+        /// a string for the new row.
+        /// </summary>
+        /// <param name="newHistoryRowItem">Formatted string that will be
+        /// added to listVie1.</param>
+        private void UpdateListView(string newHistoryRowItem)
+        {
+            // Create new row for ListViewItem
+            string[] row = { newHistoryRowItem };
+            ListViewItem item = new ListViewItem(row);
+
+            // Insert new item at the top.
+            listView1.Items.Insert(0, item);
+        }
+
+ 
+        /**********************************************************************
+         * INSTANCE VARIABLES.                                                *
+         *********************************************************************/
+        float answer;
+        bool isBinary;
+        bool isDecimal;
+        bool firstInputDetected;
+        bool isHexadecimal;
         int operation;
-        string number1;
+        float number1;        
     }
 }

@@ -36,20 +36,20 @@ namespace SciCalcZillaLib
         {
             this.parentSplitContainer = new System.Windows.Forms.SplitContainer();
             this.outputSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.inputTextbox = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.zeroToThreeTextBox = new System.Windows.Forms.TextBox();
+            this.fourToSevenTextBox = new System.Windows.Forms.TextBox();
+            this.position0Label = new System.Windows.Forms.Label();
+            this.position7Label = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.fiveToSevenTextBox = new System.Windows.Forms.TextBox();
+            this.eightToElevenTextBox = new System.Windows.Forms.TextBox();
+            this.position8Label = new System.Windows.Forms.Label();
+            this.position11Label = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
@@ -118,6 +118,21 @@ namespace SciCalcZillaLib
             this.msButton = new System.Windows.Forms.Button();
             this.mrButton = new System.Windows.Forms.Button();
             this.mcButton = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.decimalRadioButton = new System.Windows.Forms.RadioButton();
+            this.hexaecimalRadioButton = new System.Windows.Forms.RadioButton();
+            this.binaryRadioButton = new System.Windows.Forms.RadioButton();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.parentSplitContainer)).BeginInit();
             this.parentSplitContainer.Panel1.SuspendLayout();
             this.parentSplitContainer.Panel2.SuspendLayout();
@@ -142,6 +157,11 @@ namespace SciCalcZillaLib
             this.tableLayoutPanel2.SuspendLayout();
             this.keypadPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // parentSplitContainer
@@ -174,7 +194,7 @@ namespace SciCalcZillaLib
             // 
             // outputSplitContainer.Panel1
             // 
-            this.outputSplitContainer.Panel1.Controls.Add(this.textBox1);
+            this.outputSplitContainer.Panel1.Controls.Add(this.inputTextbox);
             this.outputSplitContainer.Panel1.Margin = new System.Windows.Forms.Padding(5);
             // 
             // outputSplitContainer.Panel2
@@ -184,14 +204,16 @@ namespace SciCalcZillaLib
             this.outputSplitContainer.SplitterDistance = 42;
             this.outputSplitContainer.TabIndex = 0;
             // 
-            // textBox1
+            // inputTextbox
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(4, 1);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(1318, 50);
-            this.textBox1.TabIndex = 0;
+            this.inputTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.inputTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputTextbox.Location = new System.Drawing.Point(4, 1);
+            this.inputTextbox.Name = "inputTextbox";
+            this.inputTextbox.Size = new System.Drawing.Size(1318, 50);
+            this.inputTextbox.TabIndex = 0;
+            this.inputTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.inputTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inputTextbox_KeyPress);
             // 
             // listView1
             // 
@@ -233,6 +255,8 @@ namespace SciCalcZillaLib
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.panel11);
+            this.splitContainer1.Panel2.Controls.Add(this.panel9);
             this.splitContainer1.Panel2.Controls.Add(this.hexNumbersPanel);
             this.splitContainer1.Panel2.Controls.Add(this.keypadPanel);
             this.splitContainer1.Size = new System.Drawing.Size(1332, 480);
@@ -241,105 +265,105 @@ namespace SciCalcZillaLib
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.textBox16);
-            this.panel8.Controls.Add(this.textBox17);
-            this.panel8.Controls.Add(this.label15);
-            this.panel8.Controls.Add(this.label16);
+            this.panel8.Controls.Add(this.zeroToThreeTextBox);
+            this.panel8.Controls.Add(this.fourToSevenTextBox);
+            this.panel8.Controls.Add(this.position0Label);
+            this.panel8.Controls.Add(this.position7Label);
             this.panel8.Location = new System.Drawing.Point(1163, 8);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(159, 80);
             this.panel8.TabIndex = 5;
             // 
-            // textBox16
+            // zeroToThreeTextBox
             // 
-            this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.Location = new System.Drawing.Point(81, 3);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(72, 35);
-            this.textBox16.TabIndex = 4;
-            this.textBox16.Text = "0000";
-            this.textBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.zeroToThreeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.zeroToThreeTextBox.Location = new System.Drawing.Point(81, 3);
+            this.zeroToThreeTextBox.Name = "zeroToThreeTextBox";
+            this.zeroToThreeTextBox.Size = new System.Drawing.Size(72, 35);
+            this.zeroToThreeTextBox.TabIndex = 4;
+            this.zeroToThreeTextBox.Text = "0000";
+            this.zeroToThreeTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox17
+            // fourToSevenTextBox
             // 
-            this.textBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.Location = new System.Drawing.Point(3, 3);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(72, 35);
-            this.textBox17.TabIndex = 0;
-            this.textBox17.Text = "0000";
-            this.textBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.fourToSevenTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fourToSevenTextBox.Location = new System.Drawing.Point(3, 3);
+            this.fourToSevenTextBox.Name = "fourToSevenTextBox";
+            this.fourToSevenTextBox.Size = new System.Drawing.Size(72, 35);
+            this.fourToSevenTextBox.TabIndex = 0;
+            this.fourToSevenTextBox.Text = "0000";
+            this.fourToSevenTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label15
+            // position0Label
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(117, 54);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(24, 26);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "0";
+            this.position0Label.AutoSize = true;
+            this.position0Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.position0Label.Location = new System.Drawing.Point(117, 54);
+            this.position0Label.Name = "position0Label";
+            this.position0Label.Size = new System.Drawing.Size(24, 26);
+            this.position0Label.TabIndex = 3;
+            this.position0Label.Text = "0";
             // 
-            // label16
+            // position7Label
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(3, 54);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(24, 26);
-            this.label16.TabIndex = 2;
-            this.label16.Text = "3";
+            this.position7Label.AutoSize = true;
+            this.position7Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.position7Label.Location = new System.Drawing.Point(3, 54);
+            this.position7Label.Name = "position7Label";
+            this.position7Label.Size = new System.Drawing.Size(24, 26);
+            this.position7Label.TabIndex = 2;
+            this.position7Label.Text = "3";
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.textBox14);
-            this.panel7.Controls.Add(this.textBox15);
-            this.panel7.Controls.Add(this.label13);
-            this.panel7.Controls.Add(this.label14);
+            this.panel7.Controls.Add(this.fiveToSevenTextBox);
+            this.panel7.Controls.Add(this.eightToElevenTextBox);
+            this.panel7.Controls.Add(this.position8Label);
+            this.panel7.Controls.Add(this.position11Label);
             this.panel7.Location = new System.Drawing.Point(998, 8);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(159, 80);
             this.panel7.TabIndex = 5;
             // 
-            // textBox14
+            // fiveToSevenTextBox
             // 
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(81, 3);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(72, 35);
-            this.textBox14.TabIndex = 4;
-            this.textBox14.Text = "0000";
-            this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.fiveToSevenTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fiveToSevenTextBox.Location = new System.Drawing.Point(81, 3);
+            this.fiveToSevenTextBox.Name = "fiveToSevenTextBox";
+            this.fiveToSevenTextBox.Size = new System.Drawing.Size(72, 35);
+            this.fiveToSevenTextBox.TabIndex = 4;
+            this.fiveToSevenTextBox.Text = "0000";
+            this.fiveToSevenTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox15
+            // eightToElevenTextBox
             // 
-            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(3, 3);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(72, 35);
-            this.textBox15.TabIndex = 0;
-            this.textBox15.Text = "0000";
-            this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.eightToElevenTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eightToElevenTextBox.Location = new System.Drawing.Point(3, 3);
+            this.eightToElevenTextBox.Name = "eightToElevenTextBox";
+            this.eightToElevenTextBox.Size = new System.Drawing.Size(72, 35);
+            this.eightToElevenTextBox.TabIndex = 0;
+            this.eightToElevenTextBox.Text = "0000";
+            this.eightToElevenTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label13
+            // position8Label
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(117, 54);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(24, 26);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "4";
+            this.position8Label.AutoSize = true;
+            this.position8Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.position8Label.Location = new System.Drawing.Point(117, 54);
+            this.position8Label.Name = "position8Label";
+            this.position8Label.Size = new System.Drawing.Size(24, 26);
+            this.position8Label.TabIndex = 3;
+            this.position8Label.Text = "4";
             // 
-            // label14
+            // position11Label
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(3, 54);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(24, 26);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "7";
+            this.position11Label.AutoSize = true;
+            this.position11Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.position11Label.Location = new System.Drawing.Point(3, 54);
+            this.position11Label.Name = "position11Label";
+            this.position11Label.Size = new System.Drawing.Size(24, 26);
+            this.position11Label.TabIndex = 2;
+            this.position11Label.Text = "7";
             // 
             // panel6
             // 
@@ -1184,6 +1208,191 @@ namespace SciCalcZillaLib
             this.mcButton.UseVisualStyleBackColor = true;
             this.mcButton.Click += new System.EventHandler(this.mcButton_Click);
             // 
+            // panel9
+            // 
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel9.Controls.Add(this.tableLayoutPanel3);
+            this.panel9.Location = new System.Drawing.Point(548, 17);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(207, 383);
+            this.panel9.TabIndex = 2;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.panel10, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 3;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.17647F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.41176F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.41176F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(203, 379);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(63, 6);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(61, 25);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Base";
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.binaryRadioButton);
+            this.panel10.Controls.Add(this.hexaecimalRadioButton);
+            this.panel10.Controls.Add(this.decimalRadioButton);
+            this.panel10.Controls.Add(this.label13);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(3, 3);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(197, 150);
+            this.panel10.TabIndex = 0;
+            // 
+            // decimalRadioButton
+            // 
+            this.decimalRadioButton.AutoSize = true;
+            this.decimalRadioButton.Checked = true;
+            this.decimalRadioButton.Location = new System.Drawing.Point(22, 41);
+            this.decimalRadioButton.Name = "decimalRadioButton";
+            this.decimalRadioButton.Size = new System.Drawing.Size(120, 29);
+            this.decimalRadioButton.TabIndex = 1;
+            this.decimalRadioButton.TabStop = true;
+            this.decimalRadioButton.Text = "Decimal";
+            this.decimalRadioButton.UseVisualStyleBackColor = true;
+            this.decimalRadioButton.CheckedChanged += new System.EventHandler(this.decimalRadioButton_CheckedChanged);
+            // 
+            // hexaecimalRadioButton
+            // 
+            this.hexaecimalRadioButton.AutoSize = true;
+            this.hexaecimalRadioButton.Location = new System.Drawing.Point(22, 76);
+            this.hexaecimalRadioButton.Name = "hexaecimalRadioButton";
+            this.hexaecimalRadioButton.Size = new System.Drawing.Size(167, 29);
+            this.hexaecimalRadioButton.TabIndex = 2;
+            this.hexaecimalRadioButton.Text = "Hexadecimal";
+            this.hexaecimalRadioButton.UseVisualStyleBackColor = true;
+            this.hexaecimalRadioButton.CheckedChanged += new System.EventHandler(this.hexaecimalRadioButton_CheckedChanged);
+            // 
+            // binaryRadioButton
+            // 
+            this.binaryRadioButton.AutoSize = true;
+            this.binaryRadioButton.Location = new System.Drawing.Point(22, 111);
+            this.binaryRadioButton.Name = "binaryRadioButton";
+            this.binaryRadioButton.Size = new System.Drawing.Size(104, 29);
+            this.binaryRadioButton.TabIndex = 3;
+            this.binaryRadioButton.Text = "Binary";
+            this.binaryRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // panel11
+            // 
+            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel11.Controls.Add(this.tableLayoutPanel4);
+            this.panel11.Location = new System.Drawing.Point(460, 12);
+            this.panel11.Margin = new System.Windows.Forms.Padding(5);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(82, 393);
+            this.panel11.TabIndex = 3;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.Controls.Add(this.button6, 0, 5);
+            this.tableLayoutPanel4.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.button2, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.button3, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.button4, 0, 3);
+            this.tableLayoutPanel4.Controls.Add(this.button5, 0, 4);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 6;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(78, 389);
+            this.tableLayoutPanel4.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(5, 5);
+            this.button1.Margin = new System.Windows.Forms.Padding(5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(68, 54);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "sin";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(5, 69);
+            this.button2.Margin = new System.Windows.Forms.Padding(5);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(68, 54);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "cos";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(5, 133);
+            this.button3.Margin = new System.Windows.Forms.Padding(5);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(68, 54);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "tan";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(5, 197);
+            this.button4.Margin = new System.Windows.Forms.Padding(5);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(68, 54);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "csc";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(5, 261);
+            this.button5.Margin = new System.Windows.Forms.Padding(5);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(68, 54);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "sec";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(5, 325);
+            this.button6.Margin = new System.Windows.Forms.Padding(5);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(68, 59);
+            this.button6.TabIndex = 7;
+            this.button6.Text = "cot";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
             // UserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -1226,6 +1435,12 @@ namespace SciCalcZillaLib
             this.tableLayoutPanel2.ResumeLayout(false);
             this.keypadPanel.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1235,7 +1450,7 @@ namespace SciCalcZillaLib
         // INSTANCE VARIABLES.
         private System.Windows.Forms.SplitContainer parentSplitContainer;
         private System.Windows.Forms.SplitContainer outputSplitContainer;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox inputTextbox;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.SplitContainer splitContainer1;
@@ -1245,15 +1460,15 @@ namespace SciCalcZillaLib
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox zeroToThreeTextBox;
+        private System.Windows.Forms.TextBox fourToSevenTextBox;
+        private System.Windows.Forms.Label position0Label;
+        private System.Windows.Forms.Label position7Label;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox fiveToSevenTextBox;
+        private System.Windows.Forms.TextBox eightToElevenTextBox;
+        private System.Windows.Forms.Label position8Label;
+        private System.Windows.Forms.Label position11Label;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.TextBox textBox13;
@@ -1317,5 +1532,20 @@ namespace SciCalcZillaLib
         private System.Windows.Forms.Button hexCButton;
         private System.Windows.Forms.Button hexDButton;
         private System.Windows.Forms.Button hexEButton;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.RadioButton binaryRadioButton;
+        private System.Windows.Forms.RadioButton hexaecimalRadioButton;
+        private System.Windows.Forms.RadioButton decimalRadioButton;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
