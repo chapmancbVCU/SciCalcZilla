@@ -245,6 +245,7 @@ namespace SciCalcZillaLib
                 // Update the list with a new row containing Invalid Input message.
                 UpdateListView(newRow);
                 operation = 0;
+               
             }
             inputTextbox.Focus();
             inputTextbox.Clear();
@@ -332,6 +333,14 @@ namespace SciCalcZillaLib
             if (isDecimal == true)
             {
                 computeDecimalOperations(operation);
+            }
+            else if(isHexadecimal == true)
+            {
+                computeHexadecimalOperations(operation);
+            }
+            else if(isBinary == true)
+            {
+                computeBinaryOperations(operation);
             }
         }
 
@@ -518,6 +527,17 @@ namespace SciCalcZillaLib
         }
 
         /// <summary>
+        /// This method performs the binary operatons on the operands entered 
+        /// into the calculator.
+        /// </summary>
+        /// <param name="operation">The type of mathematical operation we 
+        /// will perform.</param>
+        public void computeBinaryOperations(int operation)
+        {
+
+        }
+
+        /// <summary>
         /// This method performs the operatons on the operands entered into 
         /// the calculator.
         /// </summary>
@@ -573,6 +593,17 @@ namespace SciCalcZillaLib
 
             // Update the list with a new row.
             UpdateListView(newRow);
+        }
+
+        /// <summary>
+        /// This method performs the hexadecimal operatons on the operands 
+        /// entered into the calculator.
+        /// </summary>
+        /// <param name="operation">The type of mathematical operation we 
+        /// will perform.</param>
+        public void computeHexadecimalOperations(int operation)
+        {
+
         }
 
         /// <summary>
@@ -724,6 +755,15 @@ namespace SciCalcZillaLib
         int operation;
         float number1;
 
+
+       public enum Op
+        {
+            add = 2,
+            sub = 1,
+            mult = 3,
+            div = 4,
+            noOp = 0
+        }
         
     }
 }
