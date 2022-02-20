@@ -680,10 +680,10 @@ namespace SciCalcZillaLib
             // 
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel11.Controls.Add(this.tableLayoutPanel4);
-            this.panel11.Location = new System.Drawing.Point(460, 12);
+            this.panel11.Location = new System.Drawing.Point(448, 12);
             this.panel11.Margin = new System.Windows.Forms.Padding(5);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(82, 393);
+            this.panel11.Size = new System.Drawing.Size(94, 393);
             this.panel11.TabIndex = 3;
             // 
             // tableLayoutPanel4
@@ -707,7 +707,7 @@ namespace SciCalcZillaLib
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(78, 389);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(90, 389);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // cotOpButton
@@ -717,7 +717,7 @@ namespace SciCalcZillaLib
             this.cotOpButton.Location = new System.Drawing.Point(5, 325);
             this.cotOpButton.Margin = new System.Windows.Forms.Padding(5);
             this.cotOpButton.Name = "cotOpButton";
-            this.cotOpButton.Size = new System.Drawing.Size(68, 59);
+            this.cotOpButton.Size = new System.Drawing.Size(80, 59);
             this.cotOpButton.TabIndex = 7;
             this.cotOpButton.Text = "cot";
             this.cotOpButton.UseVisualStyleBackColor = true;
@@ -729,7 +729,7 @@ namespace SciCalcZillaLib
             this.sinOpButton.Location = new System.Drawing.Point(5, 5);
             this.sinOpButton.Margin = new System.Windows.Forms.Padding(5);
             this.sinOpButton.Name = "sinOpButton";
-            this.sinOpButton.Size = new System.Drawing.Size(68, 54);
+            this.sinOpButton.Size = new System.Drawing.Size(80, 54);
             this.sinOpButton.TabIndex = 2;
             this.sinOpButton.Text = "sin";
             this.sinOpButton.UseVisualStyleBackColor = true;
@@ -741,7 +741,7 @@ namespace SciCalcZillaLib
             this.cosOpButton.Location = new System.Drawing.Point(5, 69);
             this.cosOpButton.Margin = new System.Windows.Forms.Padding(5);
             this.cosOpButton.Name = "cosOpButton";
-            this.cosOpButton.Size = new System.Drawing.Size(68, 54);
+            this.cosOpButton.Size = new System.Drawing.Size(80, 54);
             this.cosOpButton.TabIndex = 3;
             this.cosOpButton.Text = "cos";
             this.cosOpButton.UseVisualStyleBackColor = true;
@@ -753,7 +753,7 @@ namespace SciCalcZillaLib
             this.tanOpButton.Location = new System.Drawing.Point(5, 133);
             this.tanOpButton.Margin = new System.Windows.Forms.Padding(5);
             this.tanOpButton.Name = "tanOpButton";
-            this.tanOpButton.Size = new System.Drawing.Size(68, 54);
+            this.tanOpButton.Size = new System.Drawing.Size(80, 54);
             this.tanOpButton.TabIndex = 4;
             this.tanOpButton.Text = "tan";
             this.tanOpButton.UseVisualStyleBackColor = true;
@@ -765,7 +765,7 @@ namespace SciCalcZillaLib
             this.cscOpButton.Location = new System.Drawing.Point(5, 197);
             this.cscOpButton.Margin = new System.Windows.Forms.Padding(5);
             this.cscOpButton.Name = "cscOpButton";
-            this.cscOpButton.Size = new System.Drawing.Size(68, 54);
+            this.cscOpButton.Size = new System.Drawing.Size(80, 54);
             this.cscOpButton.TabIndex = 5;
             this.cscOpButton.Text = "csc";
             this.cscOpButton.UseVisualStyleBackColor = true;
@@ -777,7 +777,7 @@ namespace SciCalcZillaLib
             this.secOpButton.Location = new System.Drawing.Point(5, 261);
             this.secOpButton.Margin = new System.Windows.Forms.Padding(5);
             this.secOpButton.Name = "secOpButton";
-            this.secOpButton.Size = new System.Drawing.Size(68, 54);
+            this.secOpButton.Size = new System.Drawing.Size(80, 54);
             this.secOpButton.TabIndex = 6;
             this.secOpButton.Text = "sec";
             this.secOpButton.UseVisualStyleBackColor = true;

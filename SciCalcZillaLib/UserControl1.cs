@@ -25,6 +25,8 @@ namespace SciCalcZillaLib
         {
             InitializeComponent();
 
+            operation = 0;      // 0 is what we use as no-op.
+
             // Set the initial values for base modes.
             isBinary = false;
             isDecimal = true;
@@ -233,19 +235,39 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void additionButton_Click(object sender, EventArgs e)
         {
-            try
+            if (isDecimal == true)
             {
-                number1 = float.Parse(inputTextbox.Text);
-                operation = 2;
+                try
+                {
+                    number1 = float.Parse(inputTextbox.Text);
+                    operation = 2;
+                }
+                catch (FormatException ex)
+                {
+                    string newRow = ""; newRow = "Invalid Input - Enter operand before " +
+                        "operation/function Addition '+'";
+                    // Update the list with a new row containing Invalid Input message.
+                    UpdateListView(newRow);
+                    operation = 0;
+
+                }
             }
-            catch (FormatException ex)
+            else if(isHexadecimal == true)
             {
-                string newRow = ""; newRow = "Invalid Input - Enter operand before " +
-                    "operation/function Addition '+'";
-                // Update the list with a new row containing Invalid Input message.
-                UpdateListView(newRow);
-                operation = 0;
-               
+                try
+                {
+                    number1Hex = inputTextbox.Text;
+                    operation = 2;
+                }
+                catch (FormatException ex)
+                {
+                    string newRow = ""; newRow = "Invalid Input - Enter operand before " +
+                        "operation/function Addition '+'";
+                    // Update the list with a new row containing Invalid Input message.
+                    UpdateListView(newRow);
+                    operation = 0;
+
+                }
             }
             inputTextbox.Focus();
             inputTextbox.Clear();
@@ -258,18 +280,39 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void subtractionButton_Click(object sender, EventArgs e)
         {
-            try
-            { 
-                number1 = float.Parse(inputTextbox.Text);
-                operation = 1;
-            }
-            catch (FormatException ex)
+            if (isDecimal == true)
             {
-                string newRow = ""; newRow = "Invalid Input - Enter operand before " +
-                    "operation/function Subraction '-'";
-                // Update the list with a new row containing Invalid Input message.
-                UpdateListView(newRow);
-                operation = 0;
+                try
+                {
+                    number1 = float.Parse(inputTextbox.Text);
+                    operation = 1;
+                }
+                catch (FormatException ex)
+                {
+                    string newRow = ""; newRow = "Invalid Input - Enter operand before " +
+                        "operation/function Addition '+'";
+                    // Update the list with a new row containing Invalid Input message.
+                    UpdateListView(newRow);
+                    operation = 0;
+
+                }
+            }
+            else if (isHexadecimal == true)
+            {
+                try
+                {
+                    number1Hex = inputTextbox.Text;
+                    operation = 1;
+                }
+                catch (FormatException ex)
+                {
+                    string newRow = ""; newRow = "Invalid Input - Enter operand before " +
+                        "operation/function Addition '+'";
+                    // Update the list with a new row containing Invalid Input message.
+                    UpdateListView(newRow);
+                    operation = 0;
+
+                }
             }
             inputTextbox.Focus();
             inputTextbox.Clear();
@@ -282,18 +325,39 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void multiplicationButton_Click(object sender, EventArgs e)
         {
-            try
+            if (isDecimal == true)
             {
-                number1 = float.Parse(inputTextbox.Text);
-                operation = 3;
+                try
+                {
+                    number1 = float.Parse(inputTextbox.Text);
+                    operation = 3;
+                }
+                catch (FormatException ex)
+                {
+                    string newRow = ""; newRow = "Invalid Input - Enter operand before " +
+                        "operation/function Addition '+'";
+                    // Update the list with a new row containing Invalid Input message.
+                    UpdateListView(newRow);
+                    operation = 0;
+
+                }
             }
-            catch (FormatException ex)
+            else if (isHexadecimal == true)
             {
-                string newRow = ""; newRow = "Invalid Input - Enter operand before " +
-                    "operation/function Multipliication '*'";
-                // Update the list with a new row containing Invalid Input message.
-                UpdateListView(newRow);
-                operation = 0;
+                try
+                {
+                    number1Hex = inputTextbox.Text;
+                    operation = 3;
+                }
+                catch (FormatException ex)
+                {
+                    string newRow = ""; newRow = "Invalid Input - Enter operand before " +
+                        "operation/function Addition '+'";
+                    // Update the list with a new row containing Invalid Input message.
+                    UpdateListView(newRow);
+                    operation = 0;
+
+                }
             }
             inputTextbox.Focus();
             inputTextbox.Clear();
@@ -306,18 +370,39 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void divisionButton_Click(object sender, EventArgs e)
         {
-            try
+            if (isDecimal == true)
             {
-                number1 = float.Parse(inputTextbox.Text);
-                operation = 4;
+                try
+                {
+                    number1 = float.Parse(inputTextbox.Text);
+                    operation = 4;
+                }
+                catch (FormatException ex)
+                {
+                    string newRow = ""; newRow = "Invalid Input - Enter operand before " +
+                        "operation/function Addition '+'";
+                    // Update the list with a new row containing Invalid Input message.
+                    UpdateListView(newRow);
+                    operation = 0;
+
+                }
             }
-            catch (FormatException ex)
+            else if (isHexadecimal == true)
             {
-                string newRow = ""; newRow = "Invalid Input - Enter operand before " +
-                    "operation/function Division '/'";
-                // Update the list with a new row containing Invalid Input message.
-                UpdateListView(newRow);
-                operation = 0;
+                try
+                {
+                    number1Hex = inputTextbox.Text;
+                    operation = 4;
+                }
+                catch (FormatException ex)
+                {
+                    string newRow = ""; newRow = "Invalid Input - Enter operand before " +
+                        "operation/function Addition '+'";
+                    // Update the list with a new row containing Invalid Input message.
+                    UpdateListView(newRow);
+                    operation = 0;
+
+                }
             }
             inputTextbox.Focus();
             inputTextbox.Clear();
@@ -330,6 +415,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void equalsButton_Click(object sender, EventArgs e)
         {
+
             if (isDecimal == true)
             {
                 computeDecimalOperations(operation);
@@ -342,6 +428,7 @@ namespace SciCalcZillaLib
             {
                 computeBinaryOperations(operation);
             }
+
         }
 
         /// <summary>
@@ -603,7 +690,80 @@ namespace SciCalcZillaLib
         /// will perform.</param>
         public void computeHexadecimalOperations(int operation)
         {
+            string newRow = "";
+            int number1HexAsInt = 0;
+            int number2HexAsInt = 0;
+            string sign = "";
 
+            // Try to get numerical input from inputTextbox.Text.
+            try
+            {
+            number1HexAsInt = Int32.Parse(number1Hex, System.Globalization.NumberStyles.HexNumber);
+            number2HexAsInt = Int32.Parse(inputTextbox.Text, System.Globalization.NumberStyles.HexNumber);
+                switch (operation)
+                {
+                    case 1:
+                        newRow = number1HexAsInt + " = Number 1";
+                        UpdateListView(newRow);
+                        newRow = number2HexAsInt.ToString() + " = Number 2";
+                        UpdateListView(newRow);
+                        hexadecimalAnswer = number1HexAsInt - number2HexAsInt;
+                        newRow = hexadecimalAnswer.ToString("X") + " = Hex answer";
+                        UpdateListView(newRow);
+                        inputTextbox.Text = hexadecimalAnswer.ToString("X");
+                        sign = "-";
+                        break;
+                    case 2:
+                        newRow = number1HexAsInt + " = Number 1";
+                        UpdateListView(newRow);
+                        newRow = number2HexAsInt.ToString() + " = Number 2";
+                        UpdateListView(newRow);
+                        hexadecimalAnswer = number1HexAsInt + number2HexAsInt;
+                        newRow = hexadecimalAnswer.ToString("X") + " = Hex answer";
+                        UpdateListView(newRow);
+                        inputTextbox.Text = hexadecimalAnswer.ToString("X");
+                        sign = "+";
+                        break;
+                    case 3:
+                        newRow = number1HexAsInt + " = Number 1";
+                        UpdateListView(newRow);
+                        newRow = number2HexAsInt.ToString() + " = Number 2";
+                        UpdateListView(newRow);
+                        hexadecimalAnswer = number1HexAsInt * number2HexAsInt;
+                        newRow = hexadecimalAnswer.ToString("X") + " = Hex answer";
+                        UpdateListView(newRow);
+                        inputTextbox.Text = hexadecimalAnswer.ToString("X");
+                        sign = "*";
+                        break;
+                    case 4:
+                        newRow = number1HexAsInt + " = Number 1";
+                        UpdateListView(newRow);
+                        newRow = number2HexAsInt.ToString() + " = Number 2";
+                        UpdateListView(newRow);
+                        hexadecimalAnswer = number1HexAsInt / number2HexAsInt;
+                        newRow = hexadecimalAnswer.ToString("X") + " = Hex answer";
+                        UpdateListView(newRow);
+                        inputTextbox.Text = hexadecimalAnswer.ToString("X");
+                        sign = "/";
+                        break;
+                    default:
+                        break;
+                }
+                // Create formatted answer for history output
+                newRow = number1HexAsInt + " " + sign + " " + number2HexAsInt + " = " +
+                     hexadecimalAnswer.ToString("X");
+            }
+            // Catch bad input such as having an equals button with no input.
+            catch (FormatException err)
+            {
+                newRow = "Invalid Input - Enter operand before " +
+                    "operation/function '='";
+                inputTextbox.Clear();
+                operation = 0;
+            }
+
+            // Update the list with a new row.
+            UpdateListView(newRow);
         }
 
         /// <summary>
@@ -749,11 +909,13 @@ namespace SciCalcZillaLib
          * INSTANCE VARIABLES.                                                *
          *********************************************************************/
         float answer;
+        int hexadecimalAnswer;
         bool isBinary;
         bool isDecimal;
         bool isHexadecimal;
         int operation;
         float number1;
+        string number1Hex;
 
 
        public enum Op
