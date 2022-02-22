@@ -698,8 +698,10 @@ namespace SciCalcZillaLib
             // Try to get numerical input from inputTextbox.Text.
             try
             {
-            number1HexAsInt = Int32.Parse(number1Hex, System.Globalization.NumberStyles.HexNumber);
-            number2HexAsInt = Int32.Parse(inputTextbox.Text, System.Globalization.NumberStyles.HexNumber);
+                number1HexAsInt = Int32.Parse(number1Hex, 
+                    System.Globalization.NumberStyles.HexNumber);
+                number2HexAsInt = Int32.Parse(inputTextbox.Text, 
+                    System.Globalization.NumberStyles.HexNumber);
                 switch (operation)
                 {
                     case 1:
@@ -708,7 +710,8 @@ namespace SciCalcZillaLib
                         newRow = number2HexAsInt.ToString() + " = Number 2";
                         UpdateListView(newRow);
                         hexadecimalAnswer = number1HexAsInt - number2HexAsInt;
-                        newRow = hexadecimalAnswer.ToString("X") + " = Hex answer";
+                        newRow = hexadecimalAnswer.ToString("X") + 
+                            " = Hex answer";
                         UpdateListView(newRow);
                         inputTextbox.Text = hexadecimalAnswer.ToString("X");
                         sign = "-";
@@ -719,7 +722,8 @@ namespace SciCalcZillaLib
                         newRow = number2HexAsInt.ToString() + " = Number 2";
                         UpdateListView(newRow);
                         hexadecimalAnswer = number1HexAsInt + number2HexAsInt;
-                        newRow = hexadecimalAnswer.ToString("X") + " = Hex answer";
+                        newRow = hexadecimalAnswer.ToString("X") + 
+                            " = Hex answer";
                         UpdateListView(newRow);
                         inputTextbox.Text = hexadecimalAnswer.ToString("X");
                         sign = "+";
@@ -730,7 +734,8 @@ namespace SciCalcZillaLib
                         newRow = number2HexAsInt.ToString() + " = Number 2";
                         UpdateListView(newRow);
                         hexadecimalAnswer = number1HexAsInt * number2HexAsInt;
-                        newRow = hexadecimalAnswer.ToString("X") + " = Hex answer";
+                        newRow = hexadecimalAnswer.ToString("X") + 
+                            " = Hex answer";
                         UpdateListView(newRow);
                         inputTextbox.Text = hexadecimalAnswer.ToString("X");
                         sign = "*";
@@ -741,7 +746,8 @@ namespace SciCalcZillaLib
                         newRow = number2HexAsInt.ToString() + " = Number 2";
                         UpdateListView(newRow);
                         hexadecimalAnswer = number1HexAsInt / number2HexAsInt;
-                        newRow = hexadecimalAnswer.ToString("X") + " = Hex answer";
+                        newRow = hexadecimalAnswer.ToString("X") + 
+                            " = Hex answer";
                         UpdateListView(newRow);
                         inputTextbox.Text = hexadecimalAnswer.ToString("X");
                         sign = "/";
@@ -750,8 +756,8 @@ namespace SciCalcZillaLib
                         break;
                 }
                 // Create formatted answer for history output
-                newRow = number1HexAsInt + " " + sign + " " + number2HexAsInt + " = " +
-                     hexadecimalAnswer.ToString("X");
+                newRow = number1HexAsInt + " " + sign + " " + 
+                    number2HexAsInt + " = " + hexadecimalAnswer.ToString("X");
             }
             // Catch bad input such as having an equals button with no input.
             catch (FormatException err)

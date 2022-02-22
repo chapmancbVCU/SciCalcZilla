@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SciCalcZillaLib.UserControl1.Op.html",
-          "hash": "fm2UgZGh4ZxwgPAZRqRhMbGuzxkEonPPGx/DAWKIDZQ="
+          "hash": "bkgQSY9iQvBlI7c6hFTn1YTlw/Uh5vGor5JXF+uL2uA="
         }
       },
       "is_incremental": false,
@@ -72,7 +72,7 @@
           "hash": "dFP/ucDN9TKu6EGWUEZl0OrR7fX3Gb1L4rHfCM7j/Lo="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -131,7 +131,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 3,
-          "skipped_file_count": 1
+          "skipped_file_count": 2
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
