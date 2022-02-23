@@ -32,8 +32,9 @@ namespace SciCalcZillaLib
             isDecimal = true;
             isHexadecimal = false;
 
-            // Disable hex buttons on startup.
+            // Disable hex and trig buttons on startup.
             disableHexButtons();
+            disableTrigOperationButtons();
 
             // Enable decimal button on startup.
             decimalButton.Enabled ^= true;
@@ -798,6 +799,19 @@ namespace SciCalcZillaLib
         }
 
         /// <summary>
+        /// Disable buttons for trig operations.
+        /// </summary>
+        private void disableTrigOperationButtons()
+        {
+            sinOpButton.Enabled = false;
+            cosOpButton.Enabled = false;
+            tanOpButton.Enabled = false;
+            cscOpButton.Enabled = false;
+            secOpButton.Enabled = false;
+            cotOpButton.Enabled = false;
+        }
+
+        /// <summary>
         /// Disable the A-F hexadecimal buttons.
         /// </summary>
         private void enableHexButtons()
@@ -827,6 +841,18 @@ namespace SciCalcZillaLib
             numberNineButton.Enabled ^= true;
         }
 
+        /// <summary>
+        /// Enable buttons for trig operations.
+        /// </summary>
+        private void enableTrigOperationButtons()
+        {
+            sinOpButton.Enabled ^= true;
+            cosOpButton.Enabled ^= true;
+            tanOpButton.Enabled ^= true;
+            cscOpButton.Enabled ^= true;
+            secOpButton.Enabled ^= true;
+            cotOpButton.Enabled ^= true;
+        }
         /// <summary>
         /// Set hexadecimal to true, others to false, and enables hexadecimal 
         /// buttons.

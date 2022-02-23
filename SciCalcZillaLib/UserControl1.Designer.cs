@@ -137,6 +137,7 @@ namespace SciCalcZillaLib
             this.msButton = new System.Windows.Forms.Button();
             this.mrButton = new System.Windows.Forms.Button();
             this.mcButton = new System.Windows.Forms.Button();
+            this.panel13 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.parentSplitContainer)).BeginInit();
             this.parentSplitContainer.Panel1.SuspendLayout();
             this.parentSplitContainer.Panel2.SuspendLayout();
@@ -260,6 +261,7 @@ namespace SciCalcZillaLib
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.panel13);
             this.splitContainer1.Panel2.Controls.Add(this.panel11);
             this.splitContainer1.Panel2.Controls.Add(this.panel9);
             this.splitContainer1.Panel2.Controls.Add(this.hexNumbersPanel);
@@ -1442,6 +1444,13 @@ namespace SciCalcZillaLib
             this.mcButton.UseVisualStyleBackColor = true;
             this.mcButton.Click += new System.EventHandler(this.mcButton_Click);
             // 
+            // panel13
+            // 
+            this.panel13.Location = new System.Drawing.Point(11, 12);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(429, 386);
+            this.panel13.TabIndex = 4;
+            // 
             // UserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -1602,5 +1611,6 @@ namespace SciCalcZillaLib
         private System.Windows.Forms.RadioButton scientificModeRadioButton;
         private System.Windows.Forms.RadioButton standardModeRadioButton;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panel13;
     }
 }
