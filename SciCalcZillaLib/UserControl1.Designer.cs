@@ -1078,6 +1078,7 @@ namespace SciCalcZillaLib
             // numberZeroButton
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.numberZeroButton, 2);
+            this.numberZeroButton.Cursor = System.Windows.Forms.Cursors.Default;
             this.numberZeroButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.numberZeroButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numberZeroButton.Location = new System.Drawing.Point(5, 330);

@@ -32,8 +32,11 @@ namespace SciCalcZillaLib
             isDecimal = true;
             isHexadecimal = false;
 
-            // Set other bases to false.
+            // Disable hex buttons on startup.
             disableHexButtons();
+
+            // Enable decimal button on startup.
+            decimalButton.Enabled ^= true;
 
             listView1.View = View.Details;
 
