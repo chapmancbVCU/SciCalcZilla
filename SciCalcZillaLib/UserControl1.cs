@@ -705,50 +705,22 @@ namespace SciCalcZillaLib
                 switch (operation)
                 {
                     case 1:
-                        newRow = number1HexAsInt + " = Number 1";
-                        UpdateListView(newRow);
-                        newRow = number2HexAsInt.ToString() + " = Number 2";
-                        UpdateListView(newRow);
                         hexadecimalAnswer = number1HexAsInt - number2HexAsInt;
-                        newRow = hexadecimalAnswer.ToString("X") + 
-                            " = Hex answer";
-                        UpdateListView(newRow);
                         inputTextbox.Text = hexadecimalAnswer.ToString("X");
                         sign = "-";
                         break;
                     case 2:
-                        newRow = number1HexAsInt + " = Number 1";
-                        UpdateListView(newRow);
-                        newRow = number2HexAsInt.ToString() + " = Number 2";
-                        UpdateListView(newRow);
                         hexadecimalAnswer = number1HexAsInt + number2HexAsInt;
-                        newRow = hexadecimalAnswer.ToString("X") + 
-                            " = Hex answer";
-                        UpdateListView(newRow);
                         inputTextbox.Text = hexadecimalAnswer.ToString("X");
                         sign = "+";
                         break;
                     case 3:
-                        newRow = number1HexAsInt + " = Number 1";
-                        UpdateListView(newRow);
-                        newRow = number2HexAsInt.ToString() + " = Number 2";
-                        UpdateListView(newRow);
                         hexadecimalAnswer = number1HexAsInt * number2HexAsInt;
-                        newRow = hexadecimalAnswer.ToString("X") + 
-                            " = Hex answer";
-                        UpdateListView(newRow);
                         inputTextbox.Text = hexadecimalAnswer.ToString("X");
                         sign = "*";
                         break;
                     case 4:
-                        newRow = number1HexAsInt + " = Number 1";
-                        UpdateListView(newRow);
-                        newRow = number2HexAsInt.ToString() + " = Number 2";
-                        UpdateListView(newRow);
                         hexadecimalAnswer = number1HexAsInt / number2HexAsInt;
-                        newRow = hexadecimalAnswer.ToString("X") + 
-                            " = Hex answer";
-                        UpdateListView(newRow);
                         inputTextbox.Text = hexadecimalAnswer.ToString("X");
                         sign = "/";
                         break;
@@ -804,6 +776,7 @@ namespace SciCalcZillaLib
             hexDButton.Enabled = false;
             hexEButton.Enabled = false;
             hexFButton.Enabled = false;
+            decimalButton.Enabled ^= true;
         }
 
         /// <summary>
@@ -832,6 +805,7 @@ namespace SciCalcZillaLib
             hexDButton.Enabled ^= true;
             hexEButton.Enabled ^= true;
             hexFButton.Enabled ^= true;
+            decimalButton.Enabled = false;
         }
 
 
