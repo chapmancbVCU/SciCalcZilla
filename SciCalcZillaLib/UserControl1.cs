@@ -750,6 +750,36 @@ namespace SciCalcZillaLib
         #endregion
 
 
+        /**********************************************************************
+         * Region for parenthesis buttons.                                    *
+         *********************************************************************/
+        #region
+        /// <summary>
+        /// Prints left parenthesis in input the textbox.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object</param>
+        private void leftParenthesisButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Prints the right parenthesis in the input textbox.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void rightParenthesisButton_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+
+        /**********************************************************************
+         * Region for managing calculator modes.                              *
+         *********************************************************************/
+        #region
         /// <summary>
         ///Set binary to true, others to false, and enables other decimal 
         ///buttons and hex buttions if enabled.
@@ -769,6 +799,171 @@ namespace SciCalcZillaLib
             // Clear the contents of the text box.
             inputTextbox.Clear();
         }
+
+        /// <summary>
+        /// Set decimal to true, others to false, and enables decimal buttons.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void decimalRadioButton_CheckedChanged(object sender,
+            EventArgs e)
+        {
+            isBinary = false;
+            isDecimal = true;
+            isHexadecimal = false;
+
+            // Disable these buttons to avoid confusion.
+            disableHexButtons();
+
+            // Ensure required buttons are enabled.
+            enableNonBinaryDigits();
+            // Clear the contents of the text box.
+            inputTextbox.Clear();
+        }
+
+        /// <summary>
+        /// Enable the A-F hexadecimal buttons.
+        /// </summary>
+        private void disableHexButtons()
+        {
+            hexAButton.Enabled = false;
+            hexBButton.Enabled = false;
+            hexCButton.Enabled = false;
+            hexDButton.Enabled = false;
+            hexEButton.Enabled = false;
+            hexFButton.Enabled = false;
+            decimalButton.Enabled ^= true;
+        }
+
+        /// <summary>
+        /// Disable buttons for non-binary base 10 digits.
+        /// </summary>
+        private void disableNonBinaryDigits()
+        {
+            numberTwoButton.Enabled = false;
+            numberThreeButton.Enabled = false;
+            numberFourButton.Enabled = false;
+            numberFiveButton.Enabled = false;
+            numberSixButton.Enabled = false;
+            numberSevenButton.Enabled = false;
+            numberEightButton.Enabled = false;
+            numberNineButton.Enabled = false;
+        }
+
+        /// <summary>
+        /// Disable buttons for trig operations.
+        /// </summary>
+        private void disableTrigOperationButtons()
+        {
+            sinOpButton.Enabled = false;
+            cosOpButton.Enabled = false;
+            tanOpButton.Enabled = false;
+            cscOpButton.Enabled = false;
+            secOpButton.Enabled = false;
+            cotOpButton.Enabled = false;
+        }
+
+        /// <summary>
+        /// Disable the A-F hexadecimal buttons.
+        /// </summary>
+        private void enableHexButtons()
+        {
+            hexAButton.Enabled ^= true;
+            hexBButton.Enabled ^= true;
+            hexCButton.Enabled ^= true;
+            hexDButton.Enabled ^= true;
+            hexEButton.Enabled ^= true;
+            hexFButton.Enabled ^= true;
+            decimalButton.Enabled = false;
+        }
+
+        /// <summary>
+        /// Enable buttons for non-binary base 10 digits.
+        /// </summary>
+        private void enableNonBinaryDigits()
+        {
+            numberTwoButton.Enabled ^= true;
+            numberThreeButton.Enabled ^= true;
+            numberFourButton.Enabled ^= true;
+            numberFiveButton.Enabled ^= true;
+            numberSixButton.Enabled ^= true;
+            numberSevenButton.Enabled ^= true;
+            numberEightButton.Enabled ^= true;
+            numberNineButton.Enabled ^= true;
+        }
+
+        /// <summary>
+        /// Enable buttons for trig operations.
+        /// </summary>
+        private void enableTrigOperationButtons()
+        {
+            sinOpButton.Enabled ^= true;
+            cosOpButton.Enabled ^= true;
+            tanOpButton.Enabled ^= true;
+            cscOpButton.Enabled ^= true;
+            secOpButton.Enabled ^= true;
+            cotOpButton.Enabled ^= true;
+        }
+
+        /// <summary>
+        /// Set hexadecimal to true, others to false, and enables hexadecimal 
+        /// buttons.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArg object.</param>
+        private void hexaecimalRadioButton_CheckedChanged(object sender,
+            EventArgs e)
+        {
+            // Enable the required buttons for this mode.
+            enableHexButtons();
+
+            /*
+             * Ensure these buttons are also enabled if previous mode is
+             * binary.
+             */
+            enableNonBinaryDigits();
+            isBinary = false;
+            isDecimal = false;
+            isHexadecimal = true;
+
+            // Clear the contents of the text box.
+            inputTextbox.Clear();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void programmingModeRadioButton_CheckedChanged(object sender, 
+            EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void standardModeRadioButton_CheckedChanged(object sender, 
+            EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void scientificModeRadioButton_CheckedChanged(object sender, 
+            EventArgs e)
+        {
+
+        }
+        #endregion
+
 
         /// <summary>
         /// This method performs the binary operatons on the operands entered 
@@ -902,136 +1097,6 @@ namespace SciCalcZillaLib
         }
 
         /// <summary>
-        /// Set decimal to true, others to false, and enables decimal buttons.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">EventArgs object.</param>
-        private void decimalRadioButton_CheckedChanged(object sender, 
-            EventArgs e)
-        {
-            isBinary = false;
-            isDecimal = true;
-            isHexadecimal = false;
-
-            // Disable these buttons to avoid confusion.
-            disableHexButtons();
-
-            // Ensure required buttons are enabled.
-            enableNonBinaryDigits();
-            // Clear the contents of the text box.
-            inputTextbox.Clear();
-        }
-        
-        /// <summary>
-        /// Enable the A-F hexadecimal buttons.
-        /// </summary>
-        private void disableHexButtons()
-        {
-            hexAButton.Enabled = false;
-            hexBButton.Enabled = false;
-            hexCButton.Enabled = false;
-            hexDButton.Enabled = false;
-            hexEButton.Enabled = false;
-            hexFButton.Enabled = false;
-            decimalButton.Enabled ^= true;
-        }
-
-        /// <summary>
-        /// Disable buttons for non-binary base 10 digits.
-        /// </summary>
-        private void disableNonBinaryDigits()
-        {
-            numberTwoButton.Enabled = false;
-            numberThreeButton.Enabled = false;
-            numberFourButton.Enabled = false;
-            numberFiveButton.Enabled = false;
-            numberSixButton.Enabled = false;
-            numberSevenButton.Enabled = false;
-            numberEightButton.Enabled = false;
-            numberNineButton.Enabled = false;
-        }
-
-        /// <summary>
-        /// Disable buttons for trig operations.
-        /// </summary>
-        private void disableTrigOperationButtons()
-        {
-            sinOpButton.Enabled = false;
-            cosOpButton.Enabled = false;
-            tanOpButton.Enabled = false;
-            cscOpButton.Enabled = false;
-            secOpButton.Enabled = false;
-            cotOpButton.Enabled = false;
-        }
-
-        /// <summary>
-        /// Disable the A-F hexadecimal buttons.
-        /// </summary>
-        private void enableHexButtons()
-        {
-            hexAButton.Enabled ^= true;
-            hexBButton.Enabled ^= true;
-            hexCButton.Enabled ^= true;
-            hexDButton.Enabled ^= true;
-            hexEButton.Enabled ^= true;
-            hexFButton.Enabled ^= true;
-            decimalButton.Enabled = false;
-        }
-
-
-        /// <summary>
-        /// Enable buttons for non-binary base 10 digits.
-        /// </summary>
-        private void enableNonBinaryDigits()
-        {
-            numberTwoButton.Enabled ^= true;
-            numberThreeButton.Enabled ^= true;
-            numberFourButton.Enabled ^= true;
-            numberFiveButton.Enabled ^= true;
-            numberSixButton.Enabled ^= true;
-            numberSevenButton.Enabled ^= true;
-            numberEightButton.Enabled ^= true;
-            numberNineButton.Enabled ^= true;
-        }
-
-        /// <summary>
-        /// Enable buttons for trig operations.
-        /// </summary>
-        private void enableTrigOperationButtons()
-        {
-            sinOpButton.Enabled ^= true;
-            cosOpButton.Enabled ^= true;
-            tanOpButton.Enabled ^= true;
-            cscOpButton.Enabled ^= true;
-            secOpButton.Enabled ^= true;
-            cotOpButton.Enabled ^= true;
-        }
-        /// <summary>
-        /// Set hexadecimal to true, others to false, and enables hexadecimal 
-        /// buttons.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">EventArg object.</param>
-        private void hexaecimalRadioButton_CheckedChanged(object sender, 
-            EventArgs e)
-        {
-            // Enable the required buttons for this mode.
-            enableHexButtons();
-
-            /*
-             * Ensure these buttons are also enabled if previous mode is
-             * binary.
-             */
-            enableNonBinaryDigits();
-            isBinary = false;
-            isDecimal = false;
-            isHexadecimal = true;
-
-            // Clear the contents of the text box.
-            inputTextbox.Clear();
-        }
-
-        /// <summary>
         /// 
         /// </summary>
         /// <param name="sender"></param>
@@ -1075,9 +1140,9 @@ namespace SciCalcZillaLib
         bool isBinary;
         bool isDecimal;
         bool isHexadecimal;
-        int operation;
         float number1;
         string number1Hex;
+        int operation;
 
         
     }
