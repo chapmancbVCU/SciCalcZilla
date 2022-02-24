@@ -1142,8 +1142,6 @@ namespace SciCalcZillaLib
         bool isHexadecimal;
         float number1;
         string number1Hex;
-        int operation;
-
-        
+        int operation;      
     }
 }
