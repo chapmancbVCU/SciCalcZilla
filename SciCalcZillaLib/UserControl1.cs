@@ -25,13 +25,19 @@ namespace SciCalcZillaLib
         {
             InitializeComponent();
 
+            operation = 0;      // 0 is what we use as no-op.
+
             // Set the initial values for base modes.
             isBinary = false;
             isDecimal = true;
             isHexadecimal = false;
 
-            // Set other bases to false.
+            // Disable hex and trig buttons on startup.
             disableHexButtons();
+            disableTrigOperationButtons();
+
+            // Enable decimal button on startup.
+            decimalButton.Enabled ^= true;
 
             listView1.View = View.Details;
 
@@ -233,20 +239,39 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void additionButton_Click(object sender, EventArgs e)
         {
-            try
+            if (isDecimal == true)
             {
-                number1 = float.Parse(inputTextbox.Text);
+                try
+                {
+                    number1 = float.Parse(inputTextbox.Text);
+                    operation = 2;
+                }
+                catch (FormatException ex)
+                {
+                    string newRow = ""; newRow = "Invalid Input - Enter operand before " +
+                        "operation/function Addition '+'";
+                    // Update the list with a new row containing Invalid Input message.
+                    UpdateListView(newRow);
+                    operation = 0;
 
-                operation = 2;
-                
+                }
             }
-            catch (FormatException ex)
+            else if(isHexadecimal == true)
             {
-                string newRow = ""; newRow = "Invalid Input - Enter operand before " +
-                    "operation/function Addition '+'";
-                // Update the list with a new row containing Invalid Input message.
-                UpdateListView(newRow);
-                operation = 0;
+                try
+                {
+                    number1Hex = inputTextbox.Text;
+                    operation = 2;
+                }
+                catch (FormatException ex)
+                {
+                    string newRow = ""; newRow = "Invalid Input - Enter operand before " +
+                        "operation/function Addition '+'";
+                    // Update the list with a new row containing Invalid Input message.
+                    UpdateListView(newRow);
+                    operation = 0;
+
+                }
             }
             inputTextbox.Focus();
             inputTextbox.Clear();
@@ -259,18 +284,39 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void subtractionButton_Click(object sender, EventArgs e)
         {
-            try
-            { 
-                number1 = float.Parse(inputTextbox.Text);
-                operation = 1;
-            }
-            catch (FormatException ex)
+            if (isDecimal == true)
             {
-                string newRow = ""; newRow = "Invalid Input - Enter operand before " +
-                    "operation/function Subraction '-'";
-                // Update the list with a new row containing Invalid Input message.
-                UpdateListView(newRow);
-                operation = 0;
+                try
+                {
+                    number1 = float.Parse(inputTextbox.Text);
+                    operation = 1;
+                }
+                catch (FormatException ex)
+                {
+                    string newRow = ""; newRow = "Invalid Input - Enter operand before " +
+                        "operation/function Addition '+'";
+                    // Update the list with a new row containing Invalid Input message.
+                    UpdateListView(newRow);
+                    operation = 0;
+
+                }
+            }
+            else if (isHexadecimal == true)
+            {
+                try
+                {
+                    number1Hex = inputTextbox.Text;
+                    operation = 1;
+                }
+                catch (FormatException ex)
+                {
+                    string newRow = ""; newRow = "Invalid Input - Enter operand before " +
+                        "operation/function Addition '+'";
+                    // Update the list with a new row containing Invalid Input message.
+                    UpdateListView(newRow);
+                    operation = 0;
+
+                }
             }
             inputTextbox.Focus();
             inputTextbox.Clear();
@@ -283,18 +329,39 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void multiplicationButton_Click(object sender, EventArgs e)
         {
-            try
+            if (isDecimal == true)
             {
-                number1 = float.Parse(inputTextbox.Text);
-                operation = 3;
+                try
+                {
+                    number1 = float.Parse(inputTextbox.Text);
+                    operation = 3;
+                }
+                catch (FormatException ex)
+                {
+                    string newRow = ""; newRow = "Invalid Input - Enter operand before " +
+                        "operation/function Addition '+'";
+                    // Update the list with a new row containing Invalid Input message.
+                    UpdateListView(newRow);
+                    operation = 0;
+
+                }
             }
-            catch (FormatException ex)
+            else if (isHexadecimal == true)
             {
-                string newRow = ""; newRow = "Invalid Input - Enter operand before " +
-                    "operation/function Multipliication '*'";
-                // Update the list with a new row containing Invalid Input message.
-                UpdateListView(newRow);
-                operation = 0;
+                try
+                {
+                    number1Hex = inputTextbox.Text;
+                    operation = 3;
+                }
+                catch (FormatException ex)
+                {
+                    string newRow = ""; newRow = "Invalid Input - Enter operand before " +
+                        "operation/function Addition '+'";
+                    // Update the list with a new row containing Invalid Input message.
+                    UpdateListView(newRow);
+                    operation = 0;
+
+                }
             }
             inputTextbox.Focus();
             inputTextbox.Clear();
@@ -307,18 +374,39 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void divisionButton_Click(object sender, EventArgs e)
         {
-            try
+            if (isDecimal == true)
             {
-                number1 = float.Parse(inputTextbox.Text);
-                operation = 4;
+                try
+                {
+                    number1 = float.Parse(inputTextbox.Text);
+                    operation = 4;
+                }
+                catch (FormatException ex)
+                {
+                    string newRow = ""; newRow = "Invalid Input - Enter operand before " +
+                        "operation/function Addition '+'";
+                    // Update the list with a new row containing Invalid Input message.
+                    UpdateListView(newRow);
+                    operation = 0;
+
+                }
             }
-            catch (FormatException ex)
+            else if (isHexadecimal == true)
             {
-                string newRow = ""; newRow = "Invalid Input - Enter operand before " +
-                    "operation/function Division '/'";
-                // Update the list with a new row containing Invalid Input message.
-                UpdateListView(newRow);
-                operation = 0;
+                try
+                {
+                    number1Hex = inputTextbox.Text;
+                    operation = 4;
+                }
+                catch (FormatException ex)
+                {
+                    string newRow = ""; newRow = "Invalid Input - Enter operand before " +
+                        "operation/function Addition '+'";
+                    // Update the list with a new row containing Invalid Input message.
+                    UpdateListView(newRow);
+                    operation = 0;
+
+                }
             }
             inputTextbox.Focus();
             inputTextbox.Clear();
@@ -331,7 +419,20 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void equalsButton_Click(object sender, EventArgs e)
         {
-            compute(operation);
+
+            if (isDecimal == true)
+            {
+                computeDecimalOperations(operation);
+            }
+            else if(isHexadecimal == true)
+            {
+                computeHexadecimalOperations(operation);
+            }
+            else if(isBinary == true)
+            {
+                computeBinaryOperations(operation);
+            }
+
         }
 
         /// <summary>
@@ -397,7 +498,7 @@ namespace SciCalcZillaLib
 
 
         /**********************************************************************
-         * Region for all other operations.                                   *
+         * Region for all other standard operations.                          *
          *********************************************************************/
         #region
         /// <summary>
@@ -496,13 +597,392 @@ namespace SciCalcZillaLib
         }
         #endregion
 
+
+        /**********************************************************************
+         * Region for trig operations.                                        *
+         *********************************************************************/
+        #region
+        /// <summary>
+        /// Implements the cotangent trig function.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void cotOpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Implements the cosine trig function.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void cosOpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Implements the tangent trig function.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void tanOpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Implements the sine trig function.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void sinOpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Implements the seceant trig function.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void secOpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Implements the coseceant trig function.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void cscOpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+
+        /**********************************************************************
+         * Region for boolean operations.                                     *
+         *********************************************************************/
+        #region
+        /// <summary>
+        /// Implements the Bitwize Shift Right Boolean Function.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void bitwiseShiftRightButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Implements the OR Boolean Function.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void orOpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Implements the NOT Boolean Function.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void notOpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Implements the Bitwize Shift Left Boolean Function.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void bitwizeShiftLeftButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Implements the NAND Boolean Function.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void nandOpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Implements the NOR Boolean Function.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void norOpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Implements the XOR Boolean Function.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void xorOpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Implements the AND Boolean Function.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void andOpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+
+        /**********************************************************************
+         * Region for parenthesis buttons.                                    *
+         *********************************************************************/
+        #region
+        /// <summary>
+        /// Prints left parenthesis in input the textbox.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object</param>
+        private void leftParenthesisButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Prints the right parenthesis in the input textbox.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void rightParenthesisButton_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+
+        /**********************************************************************
+         * Region for managing calculator modes.                              *
+         *********************************************************************/
+        #region
+        /// <summary>
+        ///Set binary to true, others to false, and enables other decimal 
+        ///buttons and hex buttions if enabled.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void binaryRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            isBinary = true;
+            isDecimal = false;
+            isHexadecimal = false;
+
+            // Disable un-needed buttons to avoid confusion from the user.
+            disableHexButtons();
+            disableNonBinaryDigits();
+
+            // Clear the contents of the text box.
+            inputTextbox.Clear();
+        }
+
+        /// <summary>
+        /// Set decimal to true, others to false, and enables decimal buttons.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void decimalRadioButton_CheckedChanged(object sender,
+            EventArgs e)
+        {
+            isBinary = false;
+            isDecimal = true;
+            isHexadecimal = false;
+
+            // Disable these buttons to avoid confusion.
+            disableHexButtons();
+
+            // Ensure required buttons are enabled.
+            enableNonBinaryDigits();
+            // Clear the contents of the text box.
+            inputTextbox.Clear();
+        }
+
+        /// <summary>
+        /// Enable the A-F hexadecimal buttons.
+        /// </summary>
+        private void disableHexButtons()
+        {
+            hexAButton.Enabled = false;
+            hexBButton.Enabled = false;
+            hexCButton.Enabled = false;
+            hexDButton.Enabled = false;
+            hexEButton.Enabled = false;
+            hexFButton.Enabled = false;
+            decimalButton.Enabled ^= true;
+        }
+
+        /// <summary>
+        /// Disable buttons for non-binary base 10 digits.
+        /// </summary>
+        private void disableNonBinaryDigits()
+        {
+            numberTwoButton.Enabled = false;
+            numberThreeButton.Enabled = false;
+            numberFourButton.Enabled = false;
+            numberFiveButton.Enabled = false;
+            numberSixButton.Enabled = false;
+            numberSevenButton.Enabled = false;
+            numberEightButton.Enabled = false;
+            numberNineButton.Enabled = false;
+        }
+
+        /// <summary>
+        /// Disable buttons for trig operations.
+        /// </summary>
+        private void disableTrigOperationButtons()
+        {
+            sinOpButton.Enabled = false;
+            cosOpButton.Enabled = false;
+            tanOpButton.Enabled = false;
+            cscOpButton.Enabled = false;
+            secOpButton.Enabled = false;
+            cotOpButton.Enabled = false;
+        }
+
+        /// <summary>
+        /// Disable the A-F hexadecimal buttons.
+        /// </summary>
+        private void enableHexButtons()
+        {
+            hexAButton.Enabled ^= true;
+            hexBButton.Enabled ^= true;
+            hexCButton.Enabled ^= true;
+            hexDButton.Enabled ^= true;
+            hexEButton.Enabled ^= true;
+            hexFButton.Enabled ^= true;
+            decimalButton.Enabled = false;
+        }
+
+        /// <summary>
+        /// Enable buttons for non-binary base 10 digits.
+        /// </summary>
+        private void enableNonBinaryDigits()
+        {
+            numberTwoButton.Enabled ^= true;
+            numberThreeButton.Enabled ^= true;
+            numberFourButton.Enabled ^= true;
+            numberFiveButton.Enabled ^= true;
+            numberSixButton.Enabled ^= true;
+            numberSevenButton.Enabled ^= true;
+            numberEightButton.Enabled ^= true;
+            numberNineButton.Enabled ^= true;
+        }
+
+        /// <summary>
+        /// Enable buttons for trig operations.
+        /// </summary>
+        private void enableTrigOperationButtons()
+        {
+            sinOpButton.Enabled ^= true;
+            cosOpButton.Enabled ^= true;
+            tanOpButton.Enabled ^= true;
+            cscOpButton.Enabled ^= true;
+            secOpButton.Enabled ^= true;
+            cotOpButton.Enabled ^= true;
+        }
+
+        /// <summary>
+        /// Set hexadecimal to true, others to false, and enables hexadecimal 
+        /// buttons.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArg object.</param>
+        private void hexaecimalRadioButton_CheckedChanged(object sender,
+            EventArgs e)
+        {
+            // Enable the required buttons for this mode.
+            enableHexButtons();
+
+            /*
+             * Ensure these buttons are also enabled if previous mode is
+             * binary.
+             */
+            enableNonBinaryDigits();
+            isBinary = false;
+            isDecimal = false;
+            isHexadecimal = true;
+
+            // Clear the contents of the text box.
+            inputTextbox.Clear();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void programmingModeRadioButton_CheckedChanged(object sender, 
+            EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void standardModeRadioButton_CheckedChanged(object sender, 
+            EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void scientificModeRadioButton_CheckedChanged(object sender, 
+            EventArgs e)
+        {
+
+        }
+        #endregion
+
+
+        /// <summary>
+        /// This method performs the binary operatons on the operands entered 
+        /// into the calculator.
+        /// </summary>
+        /// <param name="operation">The type of mathematical operation we 
+        /// will perform.</param>
+        public void computeBinaryOperations(int operation)
+        {
+
+        }
+
         /// <summary>
         /// This method performs the operatons on the operands entered into 
         /// the calculator.
         /// </summary>
         /// <param name="operation">The type of mathematical operation we 
         /// will perform.</param>
-        public void compute(int operation)
+        public void computeDecimalOperations(int operation)
         {
             string newRow = "";
             float number2 = 0;
@@ -555,63 +1035,65 @@ namespace SciCalcZillaLib
         }
 
         /// <summary>
-        /// Set decimal to true, others to false, and enables decimal buttons.
+        /// This method performs the hexadecimal operatons on the operands 
+        /// entered into the calculator.
         /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">EventArgs object.</param>
-        private void decimalRadioButton_CheckedChanged(object sender, 
-            EventArgs e)
+        /// <param name="operation">The type of mathematical operation we 
+        /// will perform.</param>
+        public void computeHexadecimalOperations(int operation)
         {
-            isBinary = false;
-            isDecimal = true;
-            isHexadecimal = false;
+            string newRow = "";
+            int number1HexAsInt = 0;
+            int number2HexAsInt = 0;
+            string sign = "";
 
-            // Clear the contents of the text box.
-            inputTextbox.Clear();
-        }
-        
-        /// <summary>
-        /// Enable the A-F hexadecimal buttons.
-        /// </summary>
-        private void disableHexButtons()
-        {
-            hexAButton.Enabled = false;
-            hexBButton.Enabled = false;
-            hexCButton.Enabled = false;
-            hexDButton.Enabled = false;
-            hexEButton.Enabled = false;
-            hexFButton.Enabled = false;
-        }
+            // Try to get numerical input from inputTextbox.Text.
+            try
+            {
+                number1HexAsInt = Int32.Parse(number1Hex, 
+                    System.Globalization.NumberStyles.HexNumber);
+                number2HexAsInt = Int32.Parse(inputTextbox.Text, 
+                    System.Globalization.NumberStyles.HexNumber);
+                switch (operation)
+                {
+                    case 1:
+                        hexadecimalAnswer = number1HexAsInt - number2HexAsInt;
+                        inputTextbox.Text = hexadecimalAnswer.ToString("X");
+                        sign = "-";
+                        break;
+                    case 2:
+                        hexadecimalAnswer = number1HexAsInt + number2HexAsInt;
+                        inputTextbox.Text = hexadecimalAnswer.ToString("X");
+                        sign = "+";
+                        break;
+                    case 3:
+                        hexadecimalAnswer = number1HexAsInt * number2HexAsInt;
+                        inputTextbox.Text = hexadecimalAnswer.ToString("X");
+                        sign = "*";
+                        break;
+                    case 4:
+                        hexadecimalAnswer = number1HexAsInt / number2HexAsInt;
+                        inputTextbox.Text = hexadecimalAnswer.ToString("X");
+                        sign = "/";
+                        break;
+                    default:
+                        break;
+                }
+                // Create formatted answer for history output
+                newRow = number1HexAsInt + " " + sign + " " + 
+                    number2HexAsInt + " = " + hexadecimalAnswer.ToString("X");
+            }
+            // Catch bad input such as having an equals button with no input.
+            catch (FormatException err)
+            {
+                newRow = "Invalid Input - Enter operand before " +
+                    "operation/function '='";
+                inputTextbox.Clear();
+                operation = 0;
+            }
 
-        /// <summary>
-        /// Disable the A-F hexadecimal buttons.
-        /// </summary>
-        private void enableHexButtons()
-        {
-            hexAButton.Enabled ^= true;
-            hexBButton.Enabled ^= true;
-            hexCButton.Enabled ^= true;
-            hexDButton.Enabled ^= true;
-            hexEButton.Enabled ^= true;
-            hexFButton.Enabled ^= true;
-        }
-
-        /// <summary>
-        /// Set hexadecimal to true, others to false, and enables hexadecimal 
-        /// buttons.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">EventArg object.</param>
-        private void hexaecimalRadioButton_CheckedChanged(object sender, 
-            EventArgs e)
-        {
-            enableHexButtons();
-            isBinary = false;
-            isDecimal = false;
-            isHexadecimal = true;
-
-            // Clear the contents of the text box.
-            inputTextbox.Clear();
+            // Update the list with a new row.
+            UpdateListView(newRow);
         }
 
         /// <summary>
@@ -654,10 +1136,12 @@ namespace SciCalcZillaLib
          * INSTANCE VARIABLES.                                                *
          *********************************************************************/
         float answer;
+        int hexadecimalAnswer;
         bool isBinary;
         bool isDecimal;
         bool isHexadecimal;
-        int operation;
         float number1;
+        string number1Hex;
+        int operation;      
     }
 }

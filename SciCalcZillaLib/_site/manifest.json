@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "0mNqbRpsDDXTKO5ha5GKr9zf7BUoKapAWWEHu6NCGRs="
+          "hash": "Dh4FJJj2+0V5DGk3HKsa9WW8OxT0WuUk3iE+vTmDzeE="
         }
       },
       "is_incremental": true,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "5Gf6S9vDs8u3A8bvVSNzuOW+bZvDwNLj504aXa8l7lY="
+          "hash": "a/aCXjPabFD7H9JQI5NCt8OFq+FHnVVheDUsOOPrRLw="
         }
       },
       "is_incremental": true,
@@ -45,7 +45,19 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "yrQ32CHv/IV8/sh17ikrzSU1zeiRenv1JMzuuyQTwS0="
+          "hash": "fi6Ig/vRefh01svZfvQoAow2xnw8Guc+k/XOGVEs8Ks="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/SciCalcZillaLib.UserControl1.Op.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SciCalcZillaLib.UserControl1.Op.html",
+          "hash": "a5t+QzhTMWad4EYU2Bx95FXoOm9E+DlxLBsa5oFgvD4="
         }
       },
       "is_incremental": true,
@@ -57,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SciCalcZillaLib.UserControl1.html",
-          "hash": "EPNVriK/cdp3yBle/y/7eDjFV8Ycb21/rlakNRk8urE="
+          "hash": "puznsodbe/JGVFM/aThUhLZDT9aRU1yjaUHMrTkoj9A="
         }
       },
       "is_incremental": true,
@@ -69,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/SciCalcZillaLib.html",
-          "hash": "2rE9vyUIlWFwcJA8JcW51jfrNSjCCd9vdkVvlS3qvyw="
+          "hash": "uwyWL721Z+5KvKAdH0SsguBmmFPj8iUCBZuMuF47eZA="
         }
       },
       "is_incremental": true,
@@ -81,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "3UOveYTq1VYfASxYppdatT9OliOs1fuX6XViEM8Ii5Y="
+          "hash": "53eDmsUYQOktT/wpMV4P6noiG5DoY9BR/K3RhM2QplU="
         }
       },
       "is_incremental": false,
@@ -118,8 +130,8 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 2,
-          "skipped_file_count": 2
+          "total_file_count": 3,
+          "skipped_file_count": 3
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

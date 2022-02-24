@@ -53,7 +53,7 @@ namespace SciCalcZilla
             this.ClientSize = new System.Drawing.Size(1331, 1113);
             this.Controls.Add(this.userControl11);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "SciCalcZilla";
             this.ResumeLayout(false);
 
         }

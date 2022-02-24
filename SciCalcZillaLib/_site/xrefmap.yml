@@ -26,19 +26,45 @@ references:
   isSpec: "True"
   fullName: SciCalcZillaLib.UserControl1.UserControl1
   nameWithType: UserControl1.UserControl1
-- uid: SciCalcZillaLib.UserControl1.compute(System.Int32)
-  name: compute(Int32)
-  href: api/SciCalcZillaLib.UserControl1.html#SciCalcZillaLib_UserControl1_compute_System_Int32_
-  commentId: M:SciCalcZillaLib.UserControl1.compute(System.Int32)
-  fullName: SciCalcZillaLib.UserControl1.compute(System.Int32)
-  nameWithType: UserControl1.compute(Int32)
-- uid: SciCalcZillaLib.UserControl1.compute*
-  name: compute
-  href: api/SciCalcZillaLib.UserControl1.html#SciCalcZillaLib_UserControl1_compute_
-  commentId: Overload:SciCalcZillaLib.UserControl1.compute
+- uid: SciCalcZillaLib.UserControl1.computeBinaryOperations(System.Int32)
+  name: computeBinaryOperations(Int32)
+  href: api/SciCalcZillaLib.UserControl1.html#SciCalcZillaLib_UserControl1_computeBinaryOperations_System_Int32_
+  commentId: M:SciCalcZillaLib.UserControl1.computeBinaryOperations(System.Int32)
+  fullName: SciCalcZillaLib.UserControl1.computeBinaryOperations(System.Int32)
+  nameWithType: UserControl1.computeBinaryOperations(Int32)
+- uid: SciCalcZillaLib.UserControl1.computeBinaryOperations*
+  name: computeBinaryOperations
+  href: api/SciCalcZillaLib.UserControl1.html#SciCalcZillaLib_UserControl1_computeBinaryOperations_
+  commentId: Overload:SciCalcZillaLib.UserControl1.computeBinaryOperations
   isSpec: "True"
-  fullName: SciCalcZillaLib.UserControl1.compute
-  nameWithType: UserControl1.compute
+  fullName: SciCalcZillaLib.UserControl1.computeBinaryOperations
+  nameWithType: UserControl1.computeBinaryOperations
+- uid: SciCalcZillaLib.UserControl1.computeDecimalOperations(System.Int32)
+  name: computeDecimalOperations(Int32)
+  href: api/SciCalcZillaLib.UserControl1.html#SciCalcZillaLib_UserControl1_computeDecimalOperations_System_Int32_
+  commentId: M:SciCalcZillaLib.UserControl1.computeDecimalOperations(System.Int32)
+  fullName: SciCalcZillaLib.UserControl1.computeDecimalOperations(System.Int32)
+  nameWithType: UserControl1.computeDecimalOperations(Int32)
+- uid: SciCalcZillaLib.UserControl1.computeDecimalOperations*
+  name: computeDecimalOperations
+  href: api/SciCalcZillaLib.UserControl1.html#SciCalcZillaLib_UserControl1_computeDecimalOperations_
+  commentId: Overload:SciCalcZillaLib.UserControl1.computeDecimalOperations
+  isSpec: "True"
+  fullName: SciCalcZillaLib.UserControl1.computeDecimalOperations
+  nameWithType: UserControl1.computeDecimalOperations
+- uid: SciCalcZillaLib.UserControl1.computeHexadecimalOperations(System.Int32)
+  name: computeHexadecimalOperations(Int32)
+  href: api/SciCalcZillaLib.UserControl1.html#SciCalcZillaLib_UserControl1_computeHexadecimalOperations_System_Int32_
+  commentId: M:SciCalcZillaLib.UserControl1.computeHexadecimalOperations(System.Int32)
+  fullName: SciCalcZillaLib.UserControl1.computeHexadecimalOperations(System.Int32)
+  nameWithType: UserControl1.computeHexadecimalOperations(Int32)
+- uid: SciCalcZillaLib.UserControl1.computeHexadecimalOperations*
+  name: computeHexadecimalOperations
+  href: api/SciCalcZillaLib.UserControl1.html#SciCalcZillaLib_UserControl1_computeHexadecimalOperations_
+  commentId: Overload:SciCalcZillaLib.UserControl1.computeHexadecimalOperations
+  isSpec: "True"
+  fullName: SciCalcZillaLib.UserControl1.computeHexadecimalOperations
+  nameWithType: UserControl1.computeHexadecimalOperations
 - uid: SciCalcZillaLib.UserControl1.Dispose(System.Boolean)
   name: Dispose(Boolean)
   href: api/SciCalcZillaLib.UserControl1.html#SciCalcZillaLib_UserControl1_Dispose_System_Boolean_
@@ -52,3 +78,39 @@ references:
   isSpec: "True"
   fullName: SciCalcZillaLib.UserControl1.Dispose
   nameWithType: UserControl1.Dispose
+- uid: SciCalcZillaLib.UserControl1.Op
+  name: UserControl1.Op
+  href: api/SciCalcZillaLib.UserControl1.Op.html
+  commentId: T:SciCalcZillaLib.UserControl1.Op
+  fullName: SciCalcZillaLib.UserControl1.Op
+  nameWithType: UserControl1.Op
+- uid: SciCalcZillaLib.UserControl1.Op.add
+  name: add
+  href: api/SciCalcZillaLib.UserControl1.Op.html#SciCalcZillaLib_UserControl1_Op_add
+  commentId: F:SciCalcZillaLib.UserControl1.Op.add
+  fullName: SciCalcZillaLib.UserControl1.Op.add
+  nameWithType: UserControl1.Op.add
+- uid: SciCalcZillaLib.UserControl1.Op.div
+  name: div
+  href: api/SciCalcZillaLib.UserControl1.Op.html#SciCalcZillaLib_UserControl1_Op_div
+  commentId: F:SciCalcZillaLib.UserControl1.Op.div
+  fullName: SciCalcZillaLib.UserControl1.Op.div
+  nameWithType: UserControl1.Op.div
+- uid: SciCalcZillaLib.UserControl1.Op.mult
+  name: mult
+  href: api/SciCalcZillaLib.UserControl1.Op.html#SciCalcZillaLib_UserControl1_Op_mult
+  commentId: F:SciCalcZillaLib.UserControl1.Op.mult
+  fullName: SciCalcZillaLib.UserControl1.Op.mult
+  nameWithType: UserControl1.Op.mult
+- uid: SciCalcZillaLib.UserControl1.Op.noOp
+  name: noOp
+  href: api/SciCalcZillaLib.UserControl1.Op.html#SciCalcZillaLib_UserControl1_Op_noOp
+  commentId: F:SciCalcZillaLib.UserControl1.Op.noOp
+  fullName: SciCalcZillaLib.UserControl1.Op.noOp
+  nameWithType: UserControl1.Op.noOp
+- uid: SciCalcZillaLib.UserControl1.Op.sub
+  name: sub
+  href: api/SciCalcZillaLib.UserControl1.Op.html#SciCalcZillaLib_UserControl1_Op_sub
+  commentId: F:SciCalcZillaLib.UserControl1.Op.sub
+  fullName: SciCalcZillaLib.UserControl1.Op.sub
+  nameWithType: UserControl1.Op.sub
