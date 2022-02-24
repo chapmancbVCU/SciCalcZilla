@@ -80,6 +80,7 @@ namespace SciCalcZillaLib
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.cotOpButton = new System.Windows.Forms.Button();
@@ -137,7 +138,38 @@ namespace SciCalcZillaLib
             this.msButton = new System.Windows.Forms.Button();
             this.mrButton = new System.Windows.Forms.Button();
             this.mcButton = new System.Windows.Forms.Button();
-            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.andOpButton = new System.Windows.Forms.Button();
+            this.orOpButton = new System.Windows.Forms.Button();
+            this.notOpButton = new System.Windows.Forms.Button();
+            this.bitwizeShiftLeftButton = new System.Windows.Forms.Button();
+            this.nandOpButton = new System.Windows.Forms.Button();
+            this.norOpButton = new System.Windows.Forms.Button();
+            this.xorOpButton = new System.Windows.Forms.Button();
+            this.bitwiseShiftRightButton = new System.Windows.Forms.Button();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.leftParenthesisButton = new System.Windows.Forms.Button();
+            this.rightParenthesisButton = new System.Windows.Forms.Button();
+            this.programmingModeRadioButton = new System.Windows.Forms.RadioButton();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.piConstantButton = new System.Windows.Forms.Button();
+            this.eOpButton = new System.Windows.Forms.Button();
+            this.lnOpButton = new System.Windows.Forms.Button();
+            this.logOpButton = new System.Windows.Forms.Button();
+            this.invOpButton = new System.Windows.Forms.Button();
+            this.nFactorialOpButton = new System.Windows.Forms.Button();
+            this.absoluteValueButton = new System.Windows.Forms.Button();
+            this.xSquaredButton = new System.Windows.Forms.Button();
+            this.xToYOpButton = new System.Windows.Forms.Button();
+            this.tenToXPowerButton = new System.Windows.Forms.Button();
+            this.oneOverXButton = new System.Windows.Forms.Button();
+            this.xCubedButton = new System.Windows.Forms.Button();
+            this.modOpButton = new System.Windows.Forms.Button();
+            this.expOpButton = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.parentSplitContainer)).BeginInit();
             this.parentSplitContainer.Panel1.SuspendLayout();
             this.parentSplitContainer.Panel2.SuspendLayout();
@@ -158,6 +190,7 @@ namespace SciCalcZillaLib
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.panel11.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -168,6 +201,11 @@ namespace SciCalcZillaLib
             this.tableLayoutPanel2.SuspendLayout();
             this.keypadPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.panel15.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // parentSplitContainer
@@ -261,6 +299,7 @@ namespace SciCalcZillaLib
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.panel14);
             this.splitContainer1.Panel2.Controls.Add(this.panel13);
             this.splitContainer1.Panel2.Controls.Add(this.panel11);
             this.splitContainer1.Panel2.Controls.Add(this.panel9);
@@ -678,14 +717,23 @@ namespace SciCalcZillaLib
             this.label4.TabIndex = 2;
             this.label4.Text = "31";
             // 
+            // panel13
+            // 
+            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel13.Controls.Add(this.tableLayoutPanel7);
+            this.panel13.Location = new System.Drawing.Point(3, 154);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(463, 251);
+            this.panel13.TabIndex = 4;
+            // 
             // panel11
             // 
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel11.Controls.Add(this.tableLayoutPanel4);
-            this.panel11.Location = new System.Drawing.Point(448, 12);
+            this.panel11.Location = new System.Drawing.Point(470, 12);
             this.panel11.Margin = new System.Windows.Forms.Padding(5);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(94, 393);
+            this.panel11.Size = new System.Drawing.Size(94, 395);
             this.panel11.TabIndex = 3;
             // 
             // tableLayoutPanel4
@@ -709,20 +757,21 @@ namespace SciCalcZillaLib
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(90, 389);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(90, 391);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // cotOpButton
             // 
             this.cotOpButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cotOpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cotOpButton.Location = new System.Drawing.Point(5, 325);
+            this.cotOpButton.Location = new System.Drawing.Point(5, 330);
             this.cotOpButton.Margin = new System.Windows.Forms.Padding(5);
             this.cotOpButton.Name = "cotOpButton";
-            this.cotOpButton.Size = new System.Drawing.Size(80, 59);
+            this.cotOpButton.Size = new System.Drawing.Size(80, 56);
             this.cotOpButton.TabIndex = 7;
             this.cotOpButton.Text = "cot";
             this.cotOpButton.UseVisualStyleBackColor = true;
+            this.cotOpButton.Click += new System.EventHandler(this.cotOpButton_Click);
             // 
             // sinOpButton
             // 
@@ -731,66 +780,71 @@ namespace SciCalcZillaLib
             this.sinOpButton.Location = new System.Drawing.Point(5, 5);
             this.sinOpButton.Margin = new System.Windows.Forms.Padding(5);
             this.sinOpButton.Name = "sinOpButton";
-            this.sinOpButton.Size = new System.Drawing.Size(80, 54);
+            this.sinOpButton.Size = new System.Drawing.Size(80, 55);
             this.sinOpButton.TabIndex = 2;
             this.sinOpButton.Text = "sin";
             this.sinOpButton.UseVisualStyleBackColor = true;
+            this.sinOpButton.Click += new System.EventHandler(this.sinOpButton_Click);
             // 
             // cosOpButton
             // 
             this.cosOpButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cosOpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cosOpButton.Location = new System.Drawing.Point(5, 69);
+            this.cosOpButton.Location = new System.Drawing.Point(5, 70);
             this.cosOpButton.Margin = new System.Windows.Forms.Padding(5);
             this.cosOpButton.Name = "cosOpButton";
-            this.cosOpButton.Size = new System.Drawing.Size(80, 54);
+            this.cosOpButton.Size = new System.Drawing.Size(80, 55);
             this.cosOpButton.TabIndex = 3;
             this.cosOpButton.Text = "cos";
             this.cosOpButton.UseVisualStyleBackColor = true;
+            this.cosOpButton.Click += new System.EventHandler(this.cosOpButton_Click);
             // 
             // tanOpButton
             // 
             this.tanOpButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tanOpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tanOpButton.Location = new System.Drawing.Point(5, 133);
+            this.tanOpButton.Location = new System.Drawing.Point(5, 135);
             this.tanOpButton.Margin = new System.Windows.Forms.Padding(5);
             this.tanOpButton.Name = "tanOpButton";
-            this.tanOpButton.Size = new System.Drawing.Size(80, 54);
+            this.tanOpButton.Size = new System.Drawing.Size(80, 55);
             this.tanOpButton.TabIndex = 4;
             this.tanOpButton.Text = "tan";
             this.tanOpButton.UseVisualStyleBackColor = true;
+            this.tanOpButton.Click += new System.EventHandler(this.tanOpButton_Click);
             // 
             // cscOpButton
             // 
             this.cscOpButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cscOpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cscOpButton.Location = new System.Drawing.Point(5, 197);
+            this.cscOpButton.Location = new System.Drawing.Point(5, 200);
             this.cscOpButton.Margin = new System.Windows.Forms.Padding(5);
             this.cscOpButton.Name = "cscOpButton";
-            this.cscOpButton.Size = new System.Drawing.Size(80, 54);
+            this.cscOpButton.Size = new System.Drawing.Size(80, 55);
             this.cscOpButton.TabIndex = 5;
             this.cscOpButton.Text = "csc";
             this.cscOpButton.UseVisualStyleBackColor = true;
+            this.cscOpButton.Click += new System.EventHandler(this.cscOpButton_Click);
             // 
             // secOpButton
             // 
             this.secOpButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.secOpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.secOpButton.Location = new System.Drawing.Point(5, 261);
+            this.secOpButton.Location = new System.Drawing.Point(5, 265);
             this.secOpButton.Margin = new System.Windows.Forms.Padding(5);
             this.secOpButton.Name = "secOpButton";
-            this.secOpButton.Size = new System.Drawing.Size(80, 54);
+            this.secOpButton.Size = new System.Drawing.Size(80, 55);
             this.secOpButton.TabIndex = 6;
             this.secOpButton.Text = "sec";
             this.secOpButton.UseVisualStyleBackColor = true;
+            this.secOpButton.Click += new System.EventHandler(this.secOpButton_Click);
             // 
             // panel9
             // 
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel9.Controls.Add(this.tableLayoutPanel3);
-            this.panel9.Location = new System.Drawing.Point(548, 17);
+            this.panel9.Location = new System.Drawing.Point(567, 17);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(207, 383);
+            this.panel9.Size = new System.Drawing.Size(188, 383);
             this.panel9.TabIndex = 2;
             // 
             // tableLayoutPanel3
@@ -799,30 +853,34 @@ namespace SciCalcZillaLib
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Controls.Add(this.panel12, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.panel10, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(-1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.panel15, 0, 2);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(5);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.17647F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.63324F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.2058F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(203, 379);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.4248F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.41425F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(184, 379);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // panel12
             // 
             this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel12.Controls.Add(this.programmingModeRadioButton);
             this.panel12.Controls.Add(this.scientificModeRadioButton);
             this.panel12.Controls.Add(this.standardModeRadioButton);
             this.panel12.Controls.Add(this.label15);
             this.panel12.Location = new System.Drawing.Point(3, 159);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(197, 147);
+            this.panel12.Size = new System.Drawing.Size(178, 150);
             this.panel12.TabIndex = 4;
             // 
             // scientificModeRadioButton
             // 
             this.scientificModeRadioButton.AutoSize = true;
-            this.scientificModeRadioButton.Location = new System.Drawing.Point(22, 76);
+            this.scientificModeRadioButton.Location = new System.Drawing.Point(9, 76);
             this.scientificModeRadioButton.Name = "scientificModeRadioButton";
             this.scientificModeRadioButton.Size = new System.Drawing.Size(130, 29);
             this.scientificModeRadioButton.TabIndex = 2;
@@ -833,7 +891,7 @@ namespace SciCalcZillaLib
             // 
             this.standardModeRadioButton.AutoSize = true;
             this.standardModeRadioButton.Checked = true;
-            this.standardModeRadioButton.Location = new System.Drawing.Point(22, 41);
+            this.standardModeRadioButton.Location = new System.Drawing.Point(9, 41);
             this.standardModeRadioButton.Name = "standardModeRadioButton";
             this.standardModeRadioButton.Size = new System.Drawing.Size(130, 29);
             this.standardModeRadioButton.TabIndex = 1;
@@ -859,13 +917,13 @@ namespace SciCalcZillaLib
             this.panel10.Controls.Add(this.label13);
             this.panel10.Location = new System.Drawing.Point(3, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(197, 150);
+            this.panel10.Size = new System.Drawing.Size(178, 150);
             this.panel10.TabIndex = 0;
             // 
             // binaryRadioButton
             // 
             this.binaryRadioButton.AutoSize = true;
-            this.binaryRadioButton.Location = new System.Drawing.Point(22, 111);
+            this.binaryRadioButton.Location = new System.Drawing.Point(9, 111);
             this.binaryRadioButton.Name = "binaryRadioButton";
             this.binaryRadioButton.Size = new System.Drawing.Size(104, 29);
             this.binaryRadioButton.TabIndex = 3;
@@ -876,7 +934,7 @@ namespace SciCalcZillaLib
             // hexaecimalRadioButton
             // 
             this.hexaecimalRadioButton.AutoSize = true;
-            this.hexaecimalRadioButton.Location = new System.Drawing.Point(22, 76);
+            this.hexaecimalRadioButton.Location = new System.Drawing.Point(9, 76);
             this.hexaecimalRadioButton.Name = "hexaecimalRadioButton";
             this.hexaecimalRadioButton.Size = new System.Drawing.Size(167, 29);
             this.hexaecimalRadioButton.TabIndex = 2;
@@ -888,7 +946,7 @@ namespace SciCalcZillaLib
             // 
             this.decimalRadioButton.AutoSize = true;
             this.decimalRadioButton.Checked = true;
-            this.decimalRadioButton.Location = new System.Drawing.Point(22, 41);
+            this.decimalRadioButton.Location = new System.Drawing.Point(9, 41);
             this.decimalRadioButton.Name = "decimalRadioButton";
             this.decimalRadioButton.Size = new System.Drawing.Size(120, 29);
             this.decimalRadioButton.TabIndex = 1;
@@ -1444,12 +1502,412 @@ namespace SciCalcZillaLib
             this.mcButton.UseVisualStyleBackColor = true;
             this.mcButton.Click += new System.EventHandler(this.mcButton_Click);
             // 
-            // panel13
+            // panel14
             // 
-            this.panel13.Location = new System.Drawing.Point(11, 12);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(429, 386);
-            this.panel13.TabIndex = 4;
+            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel14.Controls.Add(this.tableLayoutPanel5);
+            this.panel14.Location = new System.Drawing.Point(3, 10);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(463, 138);
+            this.panel14.TabIndex = 5;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 4;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel5.Controls.Add(this.bitwiseShiftRightButton, 3, 1);
+            this.tableLayoutPanel5.Controls.Add(this.xorOpButton, 2, 1);
+            this.tableLayoutPanel5.Controls.Add(this.norOpButton, 1, 1);
+            this.tableLayoutPanel5.Controls.Add(this.nandOpButton, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.bitwizeShiftLeftButton, 3, 0);
+            this.tableLayoutPanel5.Controls.Add(this.notOpButton, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.orOpButton, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.andOpButton, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(5);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 2;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(459, 134);
+            this.tableLayoutPanel5.TabIndex = 0;
+            // 
+            // andOpButton
+            // 
+            this.andOpButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.andOpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.andOpButton.Location = new System.Drawing.Point(5, 5);
+            this.andOpButton.Margin = new System.Windows.Forms.Padding(5);
+            this.andOpButton.Name = "andOpButton";
+            this.andOpButton.Size = new System.Drawing.Size(104, 57);
+            this.andOpButton.TabIndex = 0;
+            this.andOpButton.Text = "AND";
+            this.andOpButton.UseVisualStyleBackColor = true;
+            this.andOpButton.Click += new System.EventHandler(this.andOpButton_Click);
+            // 
+            // orOpButton
+            // 
+            this.orOpButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.orOpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orOpButton.Location = new System.Drawing.Point(119, 5);
+            this.orOpButton.Margin = new System.Windows.Forms.Padding(5);
+            this.orOpButton.Name = "orOpButton";
+            this.orOpButton.Size = new System.Drawing.Size(104, 57);
+            this.orOpButton.TabIndex = 1;
+            this.orOpButton.Text = "OR";
+            this.orOpButton.UseVisualStyleBackColor = true;
+            this.orOpButton.Click += new System.EventHandler(this.orOpButton_Click);
+            // 
+            // notOpButton
+            // 
+            this.notOpButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.notOpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.notOpButton.Location = new System.Drawing.Point(233, 5);
+            this.notOpButton.Margin = new System.Windows.Forms.Padding(5);
+            this.notOpButton.Name = "notOpButton";
+            this.notOpButton.Size = new System.Drawing.Size(104, 57);
+            this.notOpButton.TabIndex = 2;
+            this.notOpButton.Text = "NOT";
+            this.notOpButton.UseVisualStyleBackColor = true;
+            this.notOpButton.Click += new System.EventHandler(this.notOpButton_Click);
+            // 
+            // bitwizeShiftLeftButton
+            // 
+            this.bitwizeShiftLeftButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bitwizeShiftLeftButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bitwizeShiftLeftButton.Location = new System.Drawing.Point(347, 5);
+            this.bitwizeShiftLeftButton.Margin = new System.Windows.Forms.Padding(5);
+            this.bitwizeShiftLeftButton.Name = "bitwizeShiftLeftButton";
+            this.bitwizeShiftLeftButton.Size = new System.Drawing.Size(107, 57);
+            this.bitwizeShiftLeftButton.TabIndex = 3;
+            this.bitwizeShiftLeftButton.Text = "<<";
+            this.bitwizeShiftLeftButton.UseVisualStyleBackColor = true;
+            this.bitwizeShiftLeftButton.Click += new System.EventHandler(this.bitwizeShiftLeftButton_Click);
+            // 
+            // nandOpButton
+            // 
+            this.nandOpButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nandOpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nandOpButton.Location = new System.Drawing.Point(5, 72);
+            this.nandOpButton.Margin = new System.Windows.Forms.Padding(5);
+            this.nandOpButton.Name = "nandOpButton";
+            this.nandOpButton.Size = new System.Drawing.Size(104, 57);
+            this.nandOpButton.TabIndex = 4;
+            this.nandOpButton.Text = "NAND";
+            this.nandOpButton.UseVisualStyleBackColor = true;
+            this.nandOpButton.Click += new System.EventHandler(this.nandOpButton_Click);
+            // 
+            // norOpButton
+            // 
+            this.norOpButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.norOpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.norOpButton.Location = new System.Drawing.Point(119, 72);
+            this.norOpButton.Margin = new System.Windows.Forms.Padding(5);
+            this.norOpButton.Name = "norOpButton";
+            this.norOpButton.Size = new System.Drawing.Size(104, 57);
+            this.norOpButton.TabIndex = 5;
+            this.norOpButton.Text = "NOR";
+            this.norOpButton.UseVisualStyleBackColor = true;
+            this.norOpButton.Click += new System.EventHandler(this.norOpButton_Click);
+            // 
+            // xorOpButton
+            // 
+            this.xorOpButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xorOpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xorOpButton.Location = new System.Drawing.Point(233, 72);
+            this.xorOpButton.Margin = new System.Windows.Forms.Padding(5);
+            this.xorOpButton.Name = "xorOpButton";
+            this.xorOpButton.Size = new System.Drawing.Size(104, 57);
+            this.xorOpButton.TabIndex = 6;
+            this.xorOpButton.Text = "XOR";
+            this.xorOpButton.UseVisualStyleBackColor = true;
+            this.xorOpButton.Click += new System.EventHandler(this.xorOpButton_Click);
+            // 
+            // bitwiseShiftRightButton
+            // 
+            this.bitwiseShiftRightButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bitwiseShiftRightButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bitwiseShiftRightButton.Location = new System.Drawing.Point(347, 72);
+            this.bitwiseShiftRightButton.Margin = new System.Windows.Forms.Padding(5);
+            this.bitwiseShiftRightButton.Name = "bitwiseShiftRightButton";
+            this.bitwiseShiftRightButton.Size = new System.Drawing.Size(107, 57);
+            this.bitwiseShiftRightButton.TabIndex = 7;
+            this.bitwiseShiftRightButton.Text = ">>";
+            this.bitwiseShiftRightButton.UseVisualStyleBackColor = true;
+            this.bitwiseShiftRightButton.Click += new System.EventHandler(this.bitwiseShiftRightButton_Click);
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.tableLayoutPanel6);
+            this.panel15.Location = new System.Drawing.Point(3, 315);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(178, 61);
+            this.panel15.TabIndex = 5;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 2;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Controls.Add(this.rightParenthesisButton, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.leftParenthesisButton, 0, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(178, 61);
+            this.tableLayoutPanel6.TabIndex = 0;
+            // 
+            // leftParenthesisButton
+            // 
+            this.leftParenthesisButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.leftParenthesisButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.leftParenthesisButton.Location = new System.Drawing.Point(5, 5);
+            this.leftParenthesisButton.Margin = new System.Windows.Forms.Padding(5);
+            this.leftParenthesisButton.Name = "leftParenthesisButton";
+            this.leftParenthesisButton.Size = new System.Drawing.Size(79, 51);
+            this.leftParenthesisButton.TabIndex = 0;
+            this.leftParenthesisButton.Text = "(";
+            this.leftParenthesisButton.UseVisualStyleBackColor = true;
+            // 
+            // rightParenthesisButton
+            // 
+            this.rightParenthesisButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rightParenthesisButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rightParenthesisButton.Location = new System.Drawing.Point(94, 5);
+            this.rightParenthesisButton.Margin = new System.Windows.Forms.Padding(5);
+            this.rightParenthesisButton.Name = "rightParenthesisButton";
+            this.rightParenthesisButton.Size = new System.Drawing.Size(79, 51);
+            this.rightParenthesisButton.TabIndex = 1;
+            this.rightParenthesisButton.Text = ")";
+            this.rightParenthesisButton.UseVisualStyleBackColor = true;
+            // 
+            // programmingModeRadioButton
+            // 
+            this.programmingModeRadioButton.AutoSize = true;
+            this.programmingModeRadioButton.Location = new System.Drawing.Point(9, 111);
+            this.programmingModeRadioButton.Name = "programmingModeRadioButton";
+            this.programmingModeRadioButton.Size = new System.Drawing.Size(170, 29);
+            this.programmingModeRadioButton.TabIndex = 3;
+            this.programmingModeRadioButton.Text = "Programming";
+            this.programmingModeRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 4;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel7.Controls.Add(this.button19, 3, 3);
+            this.tableLayoutPanel7.Controls.Add(this.button18, 2, 3);
+            this.tableLayoutPanel7.Controls.Add(this.expOpButton, 1, 3);
+            this.tableLayoutPanel7.Controls.Add(this.xCubedButton, 2, 2);
+            this.tableLayoutPanel7.Controls.Add(this.oneOverXButton, 0, 2);
+            this.tableLayoutPanel7.Controls.Add(this.xToYOpButton, 3, 1);
+            this.tableLayoutPanel7.Controls.Add(this.xSquaredButton, 2, 1);
+            this.tableLayoutPanel7.Controls.Add(this.absoluteValueButton, 1, 1);
+            this.tableLayoutPanel7.Controls.Add(this.nFactorialOpButton, 0, 1);
+            this.tableLayoutPanel7.Controls.Add(this.logOpButton, 3, 0);
+            this.tableLayoutPanel7.Controls.Add(this.lnOpButton, 2, 0);
+            this.tableLayoutPanel7.Controls.Add(this.eOpButton, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.piConstantButton, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.tenToXPowerButton, 1, 2);
+            this.tableLayoutPanel7.Controls.Add(this.modOpButton, 3, 2);
+            this.tableLayoutPanel7.Controls.Add(this.invOpButton, 0, 3);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 4;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(459, 247);
+            this.tableLayoutPanel7.TabIndex = 0;
+            // 
+            // piConstantButton
+            // 
+            this.piConstantButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.piConstantButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.piConstantButton.Location = new System.Drawing.Point(3, 3);
+            this.piConstantButton.Name = "piConstantButton";
+            this.piConstantButton.Size = new System.Drawing.Size(108, 55);
+            this.piConstantButton.TabIndex = 0;
+            this.piConstantButton.Text = "Pi";
+            this.piConstantButton.UseVisualStyleBackColor = true;
+            // 
+            // eOpButton
+            // 
+            this.eOpButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.eOpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eOpButton.Location = new System.Drawing.Point(117, 3);
+            this.eOpButton.Name = "eOpButton";
+            this.eOpButton.Size = new System.Drawing.Size(108, 55);
+            this.eOpButton.TabIndex = 1;
+            this.eOpButton.Text = "e";
+            this.eOpButton.UseVisualStyleBackColor = true;
+            // 
+            // lnOpButton
+            // 
+            this.lnOpButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lnOpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnOpButton.Location = new System.Drawing.Point(231, 3);
+            this.lnOpButton.Name = "lnOpButton";
+            this.lnOpButton.Size = new System.Drawing.Size(108, 55);
+            this.lnOpButton.TabIndex = 2;
+            this.lnOpButton.Text = "ln";
+            this.lnOpButton.UseVisualStyleBackColor = true;
+            // 
+            // logOpButton
+            // 
+            this.logOpButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logOpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logOpButton.Location = new System.Drawing.Point(345, 3);
+            this.logOpButton.Name = "logOpButton";
+            this.logOpButton.Size = new System.Drawing.Size(111, 55);
+            this.logOpButton.TabIndex = 3;
+            this.logOpButton.Text = "log";
+            this.logOpButton.UseVisualStyleBackColor = true;
+            // 
+            // invOpButton
+            // 
+            this.invOpButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.invOpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.invOpButton.Location = new System.Drawing.Point(3, 186);
+            this.invOpButton.Name = "invOpButton";
+            this.invOpButton.Size = new System.Drawing.Size(108, 58);
+            this.invOpButton.TabIndex = 4;
+            this.invOpButton.Text = "Inv";
+            this.invOpButton.UseVisualStyleBackColor = true;
+            // 
+            // nFactorialOpButton
+            // 
+            this.nFactorialOpButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nFactorialOpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nFactorialOpButton.Location = new System.Drawing.Point(3, 64);
+            this.nFactorialOpButton.Name = "nFactorialOpButton";
+            this.nFactorialOpButton.Size = new System.Drawing.Size(108, 55);
+            this.nFactorialOpButton.TabIndex = 5;
+            this.nFactorialOpButton.Text = "n!";
+            this.nFactorialOpButton.UseVisualStyleBackColor = true;
+            // 
+            // absoluteValueButton
+            // 
+            this.absoluteValueButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.absoluteValueButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.absoluteValueButton.Location = new System.Drawing.Point(117, 64);
+            this.absoluteValueButton.Name = "absoluteValueButton";
+            this.absoluteValueButton.Size = new System.Drawing.Size(108, 55);
+            this.absoluteValueButton.TabIndex = 6;
+            this.absoluteValueButton.Text = "|x|";
+            this.absoluteValueButton.UseVisualStyleBackColor = true;
+            // 
+            // xSquaredButton
+            // 
+            this.xSquaredButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xSquaredButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xSquaredButton.Location = new System.Drawing.Point(231, 64);
+            this.xSquaredButton.Name = "xSquaredButton";
+            this.xSquaredButton.Size = new System.Drawing.Size(108, 55);
+            this.xSquaredButton.TabIndex = 7;
+            this.xSquaredButton.Text = "x^2";
+            this.xSquaredButton.UseVisualStyleBackColor = true;
+            // 
+            // xToYOpButton
+            // 
+            this.xToYOpButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xToYOpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xToYOpButton.Location = new System.Drawing.Point(345, 64);
+            this.xToYOpButton.Name = "xToYOpButton";
+            this.xToYOpButton.Size = new System.Drawing.Size(111, 55);
+            this.xToYOpButton.TabIndex = 8;
+            this.xToYOpButton.Text = "x^y";
+            this.xToYOpButton.UseVisualStyleBackColor = true;
+            // 
+            // tenToXPowerButton
+            // 
+            this.tenToXPowerButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tenToXPowerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tenToXPowerButton.Location = new System.Drawing.Point(117, 125);
+            this.tenToXPowerButton.Name = "tenToXPowerButton";
+            this.tenToXPowerButton.Size = new System.Drawing.Size(108, 55);
+            this.tenToXPowerButton.TabIndex = 9;
+            this.tenToXPowerButton.Text = "10^x";
+            this.tenToXPowerButton.UseVisualStyleBackColor = true;
+            // 
+            // oneOverXButton
+            // 
+            this.oneOverXButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.oneOverXButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.oneOverXButton.Location = new System.Drawing.Point(3, 125);
+            this.oneOverXButton.Name = "oneOverXButton";
+            this.oneOverXButton.Size = new System.Drawing.Size(108, 55);
+            this.oneOverXButton.TabIndex = 10;
+            this.oneOverXButton.Text = "1/x";
+            this.oneOverXButton.UseVisualStyleBackColor = true;
+            // 
+            // xCubedButton
+            // 
+            this.xCubedButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xCubedButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xCubedButton.Location = new System.Drawing.Point(231, 125);
+            this.xCubedButton.Name = "xCubedButton";
+            this.xCubedButton.Size = new System.Drawing.Size(108, 55);
+            this.xCubedButton.TabIndex = 12;
+            this.xCubedButton.Text = "x^3";
+            this.xCubedButton.UseVisualStyleBackColor = true;
+            // 
+            // modOpButton
+            // 
+            this.modOpButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.modOpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modOpButton.Location = new System.Drawing.Point(345, 125);
+            this.modOpButton.Name = "modOpButton";
+            this.modOpButton.Size = new System.Drawing.Size(111, 55);
+            this.modOpButton.TabIndex = 14;
+            this.modOpButton.Text = "mod";
+            this.modOpButton.UseVisualStyleBackColor = true;
+            // 
+            // expOpButton
+            // 
+            this.expOpButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.expOpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expOpButton.Location = new System.Drawing.Point(117, 186);
+            this.expOpButton.Name = "expOpButton";
+            this.expOpButton.Size = new System.Drawing.Size(108, 58);
+            this.expOpButton.TabIndex = 16;
+            this.expOpButton.Text = "EXP";
+            this.expOpButton.UseVisualStyleBackColor = true;
+            // 
+            // button18
+            // 
+            this.button18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button18.Location = new System.Drawing.Point(231, 186);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(108, 58);
+            this.button18.TabIndex = 17;
+            this.button18.Text = "button18";
+            this.button18.UseVisualStyleBackColor = true;
+            // 
+            // button19
+            // 
+            this.button19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button19.Location = new System.Drawing.Point(345, 186);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(111, 58);
+            this.button19.TabIndex = 18;
+            this.button19.Text = "button19";
+            this.button19.UseVisualStyleBackColor = true;
             // 
             // UserControl1
             // 
@@ -1489,6 +1947,7 @@ namespace SciCalcZillaLib
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel13.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
@@ -1501,6 +1960,11 @@ namespace SciCalcZillaLib
             this.tableLayoutPanel2.ResumeLayout(false);
             this.keypadPanel.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.panel15.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1612,5 +2076,37 @@ namespace SciCalcZillaLib
         private System.Windows.Forms.RadioButton standardModeRadioButton;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Button bitwiseShiftRightButton;
+        private System.Windows.Forms.Button xorOpButton;
+        private System.Windows.Forms.Button norOpButton;
+        private System.Windows.Forms.Button nandOpButton;
+        private System.Windows.Forms.Button bitwizeShiftLeftButton;
+        private System.Windows.Forms.Button notOpButton;
+        private System.Windows.Forms.Button orOpButton;
+        private System.Windows.Forms.Button andOpButton;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.Button rightParenthesisButton;
+        private System.Windows.Forms.Button leftParenthesisButton;
+        private System.Windows.Forms.RadioButton programmingModeRadioButton;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.Button piConstantButton;
+        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button expOpButton;
+        private System.Windows.Forms.Button modOpButton;
+        private System.Windows.Forms.Button xCubedButton;
+        private System.Windows.Forms.Button oneOverXButton;
+        private System.Windows.Forms.Button tenToXPowerButton;
+        private System.Windows.Forms.Button xToYOpButton;
+        private System.Windows.Forms.Button xSquaredButton;
+        private System.Windows.Forms.Button absoluteValueButton;
+        private System.Windows.Forms.Button nFactorialOpButton;
+        private System.Windows.Forms.Button invOpButton;
+        private System.Windows.Forms.Button logOpButton;
+        private System.Windows.Forms.Button lnOpButton;
+        private System.Windows.Forms.Button eOpButton;
     }
 }

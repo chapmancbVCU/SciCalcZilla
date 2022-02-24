@@ -498,7 +498,7 @@ namespace SciCalcZillaLib
 
 
         /**********************************************************************
-         * Region for all other operations.                                   *
+         * Region for all other standard operations.                          *
          *********************************************************************/
         #region
         /// <summary>
@@ -596,6 +596,159 @@ namespace SciCalcZillaLib
             operation = 0;
         }
         #endregion
+
+
+        /**********************************************************************
+         * Region for trig operations.                                        *
+         *********************************************************************/
+        #region
+        /// <summary>
+        /// Implements the cotangent trig function.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void cotOpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Implements the cosine trig function.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void cosOpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Implements the tangent trig function.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void tanOpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Implements the sine trig function.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void sinOpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Implements the seceant trig function.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void secOpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Implements the coseceant trig function.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void cscOpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+
+        /**********************************************************************
+         * Region for boolean operations.                                     *
+         *********************************************************************/
+        #region
+        /// <summary>
+        /// Implements the Bitwize Shift Right Boolean Function.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void bitwiseShiftRightButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Implements the OR Boolean Function.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void orOpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Implements the NOT Boolean Function.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void notOpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Implements the Bitwize Shift Left Boolean Function.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void bitwizeShiftLeftButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Implements the NAND Boolean Function.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void nandOpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Implements the NOR Boolean Function.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void norOpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Implements the XOR Boolean Function.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void xorOpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Implements the AND Boolean Function.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
+        private void andOpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
 
         /// <summary>
         ///Set binary to true, others to false, and enables other decimal 
@@ -926,15 +1079,6 @@ namespace SciCalcZillaLib
         float number1;
         string number1Hex;
 
-
-       public enum Op
-        {
-            add = 2,
-            sub = 1,
-            mult = 3,
-            div = 4,
-            noOp = 0
-        }
         
     }
 }
