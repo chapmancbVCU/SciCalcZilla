@@ -14,7 +14,7 @@ using System.Windows.Forms;
 namespace SciCalcZillaLib
 {
     /// <summary>
-    /// 
+    /// Implements fuctions of the calculator.
     /// </summary>
     public partial class UserControl1: UserControl
     {
