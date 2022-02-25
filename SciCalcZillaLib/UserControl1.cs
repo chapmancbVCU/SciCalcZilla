@@ -24,8 +24,9 @@ namespace SciCalcZillaLib
         public UserControl1()
         {
             InitializeComponent();
-
-            operation = 0;      // 0 is what we use as no-op.
+            
+            // 0 is what we use as no-op.
+            operation = 0;
 
             // Set the initial values for base modes.
             isBinary = false;
