@@ -794,6 +794,7 @@ namespace SciCalcZillaLib
         /// <param name="e">EventArgs object.</param>
         private void binaryRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            // Set boolean flags for modes.
             isBinary = true;
             isDecimal = false;
             isHexadecimal = false;
@@ -814,6 +815,7 @@ namespace SciCalcZillaLib
         private void decimalRadioButton_CheckedChanged(object sender,
             EventArgs e)
         {
+            // Set boolean flags for modes.
             isBinary = false;
             isDecimal = true;
             isHexadecimal = false;
@@ -823,6 +825,7 @@ namespace SciCalcZillaLib
 
             // Ensure required buttons are enabled.
             enableNonBinaryDigits();
+
             // Clear the contents of the text box.
             inputTextbox.Clear();
         }
@@ -975,9 +978,13 @@ namespace SciCalcZillaLib
         private void programmingModeRadioButton_CheckedChanged(object sender, 
             EventArgs e)
         {
+            // Set boolean flags for modes.
             isStandard = false;
             isScientific = false;
             isProgramming = true;
+
+            // Clear the contents of the text box.
+            inputTextbox.Clear();
         }
 
         /// <summary>
@@ -988,14 +995,30 @@ namespace SciCalcZillaLib
         private void standardModeRadioButton_CheckedChanged(object sender, 
             EventArgs e)
         {
+            // Set boolean flags for modes.
             isStandard = true;
             isScientific = false;
             isProgramming = false;
             isHexadecimal = false;
             isBinary = false;
             isDecimal = true;
+
+            // Enable radio buttons for modes we want enabled.
             hexaecimalRadioButton.Enabled ^= true;
             binaryRadioButton.Enabled ^= true;
+
+            // Return to default settings for when app is started.
+            disableHexButtons();
+            disableTrigOperationButtons();
+            disableBooleanOperationButtons();
+
+            // Select decimal button and set others to false.
+            decimalRadioButton.Checked = true;
+            hexaecimalRadioButton.Checked = false;
+            binaryRadioButton.Checked = false;
+
+            // Clear the contents of the text box.
+            inputTextbox.Clear();
         }
 
         /// <summary>
@@ -1006,14 +1029,26 @@ namespace SciCalcZillaLib
         private void scientificModeRadioButton_CheckedChanged(object sender, 
             EventArgs e)
         {
+            // Set boolean flags for modes.
             isStandard = false;
             isScientific = true;
             isProgramming = false;
             isHexadecimal = false;
             isBinary = false;
             isDecimal = true;
+
+            // Make sure decimal button is enabled.
+            decimalButton.Enabled ^= true;
+
+            // Disable radio buttons for modes we want disabled.
             hexaecimalRadioButton.Enabled = false;
             binaryRadioButton.Enabled = false;
+
+            // Enable buttons needed for scientific mode.
+            enableTrigOperationButtons();
+
+            // Clear the contents of the text box.
+            inputTextbox.Clear();
         }
         #endregion
 
