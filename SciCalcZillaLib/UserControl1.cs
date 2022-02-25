@@ -32,9 +32,15 @@ namespace SciCalcZillaLib
             isDecimal = true;
             isHexadecimal = false;
 
-            // Disable hex and trig buttons on startup.
+            // Set the initial values for the calculator modes.
+            isStandard = true;
+            isScientific = false;
+            isProgramming = false;
+
+            // Disable hex, Boolean and trig buttons on startup.
             disableHexButtons();
             disableTrigOperationButtons();
+            disableBooleanOperationButtons();
 
             // Enable decimal button on startup.
             decimalButton.Enabled ^= true;
@@ -822,7 +828,22 @@ namespace SciCalcZillaLib
         }
 
         /// <summary>
-        /// Enable the A-F hexadecimal buttons.
+        /// Disable Boolean operation buttons.
+        /// </summary>
+        private void disableBooleanOperationButtons()
+        {
+            andOpButton.Enabled = false;
+            orOpButton.Enabled = false;
+            notOpButton.Enabled = false;
+            nandOpButton.Enabled = false;
+            norOpButton.Enabled = false;
+            xorOpButton.Enabled = false;
+            bitwizeShiftLeftButton.Enabled = false;
+            bitwiseShiftRightButton.Enabled = false;
+        }
+
+        /// <summary>
+        /// Disable the A-F hexadecimal buttons.
         /// </summary>
         private void disableHexButtons()
         {
@@ -864,7 +885,22 @@ namespace SciCalcZillaLib
         }
 
         /// <summary>
-        /// Disable the A-F hexadecimal buttons.
+        /// Enable Boolean operation buttons.
+        /// </summary>
+        private void enableBooleanOperationButtons()
+        {
+            andOpButton.Enabled ^= true;
+            orOpButton.Enabled ^= true;
+            notOpButton.Enabled ^= true;
+            nandOpButton.Enabled ^= true;
+            norOpButton.Enabled ^= true;
+            xorOpButton.Enabled ^= true;
+            bitwizeShiftLeftButton.Enabled ^= true;
+            bitwiseShiftRightButton.Enabled ^= true;
+        }
+
+        /// <summary>
+        /// Enable the A-F hexadecimal buttons.
         /// </summary>
         private void enableHexButtons()
         {
@@ -931,36 +967,53 @@ namespace SciCalcZillaLib
         }
 
         /// <summary>
-        /// 
+        /// Event handler for when the programming mode radio button is 
+        /// selected.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
         private void programmingModeRadioButton_CheckedChanged(object sender, 
             EventArgs e)
         {
-
+            isStandard = false;
+            isScientific = false;
+            isProgramming = true;
         }
 
         /// <summary>
-        /// 
+        /// Event handler for when the standard mode radio button is selected.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
         private void standardModeRadioButton_CheckedChanged(object sender, 
             EventArgs e)
         {
-
+            isStandard = true;
+            isScientific = false;
+            isProgramming = false;
+            isHexadecimal = false;
+            isBinary = false;
+            isDecimal = true;
+            hexaecimalRadioButton.Enabled ^= true;
+            binaryRadioButton.Enabled ^= true;
         }
 
         /// <summary>
-        /// 
+        /// Event handler for when the scientific mode radio button is selected.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">EventArgs object.</param>
         private void scientificModeRadioButton_CheckedChanged(object sender, 
             EventArgs e)
         {
-
+            isStandard = false;
+            isScientific = true;
+            isProgramming = false;
+            isHexadecimal = false;
+            isBinary = false;
+            isDecimal = true;
+            hexaecimalRadioButton.Enabled = false;
+            binaryRadioButton.Enabled = false;
         }
         #endregion
 
@@ -1140,6 +1193,9 @@ namespace SciCalcZillaLib
         bool isBinary;
         bool isDecimal;
         bool isHexadecimal;
+        bool isStandard;
+        bool isScientific;
+        bool isProgramming;
         float number1;
         string number1Hex;
         int operation;      

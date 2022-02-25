@@ -53,26 +53,14 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/SciCalcZillaLib.UserControl1.Op.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/SciCalcZillaLib.UserControl1.Op.html",
-          "hash": "a5t+QzhTMWad4EYU2Bx95FXoOm9E+DlxLBsa5oFgvD4="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "obj/api/SciCalcZillaLib.UserControl1.yml",
       "output": {
         ".html": {
           "relative_path": "api/SciCalcZillaLib.UserControl1.html",
-          "hash": "puznsodbe/JGVFM/aThUhLZDT9aRU1yjaUHMrTkoj9A="
+          "hash": "wfVpx9E+CF9q6tm8tEKf8UdeM2hW2j8Z8Oykc2DNJuw="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -81,10 +69,10 @@
       "output": {
         ".html": {
           "relative_path": "api/SciCalcZillaLib.html",
-          "hash": "uwyWL721Z+5KvKAdH0SsguBmmFPj8iUCBZuMuF47eZA="
+          "hash": "2rE9vyUIlWFwcJA8JcW51jfrNSjCCd9vdkVvlS3qvyw="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -93,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "53eDmsUYQOktT/wpMV4P6noiG5DoY9BR/K3RhM2QplU="
+          "hash": "3UOveYTq1VYfASxYppdatT9OliOs1fuX6XViEM8Ii5Y="
         }
       },
       "is_incremental": false,
@@ -130,8 +118,8 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 3,
-          "skipped_file_count": 3
+          "total_file_count": 2,
+          "skipped_file_count": 1
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
