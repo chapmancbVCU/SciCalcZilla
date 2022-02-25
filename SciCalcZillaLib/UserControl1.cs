@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 /// <summary>
-/// 
+/// Namespace for SciCalcZillaLib
 /// </summary>
 namespace SciCalcZillaLib
 {
